@@ -1,57 +1,57 @@
 # Workload-Aware Warehouse Picking Algorithm Design
 
-작성 기준: 2026-11-02 · 상태: 구현 전 기술 설계
+As of: 2026-11-02 · Status: Technical design prior to implementation.
 
-연구질문·실험 계획·문헌은 [Proposal](01-interdeliverable-proposal.md), 피처 정의의 근거와 변경 과정은 [Refinement](03-workload-model-refinement.md)를 따른다. 이 문서의 구체화 제안은 구현 완료나 기존 대화에서의 최종 합의를 의미하지 않는다.
+Research questions, experiments, and references are maintained in the [Proposal](01-interdeliverable-proposal.md). The rationale and history behind the feature definitions are maintained in [Refinement](03-workload-model-refinement.md). Detailed proposals in this document do not imply completed implementation or final agreement in the earlier conversation.
 
-## 1. 설계 변화와 현재 문제
+## 1. Design Revisions and Current Problem
 
-초기에는 `주어진 순서 / NN / NN + 2-opt / Brute Force` 비교로 시작했다. 이후 DP와 Conveyor-Aware를 포함하고 workload에 따라 후보를 선택하는 구조로 범위가 정리되었다. 초기 네 방법은 기준선과 검증 도구로 유지한다. Dijkstra는 방문 순서를 고르는 후보가 아니라 모든 후보가 공유하는 통로 거리 계산 계층이다. A*는 초기 검토 후보로 남기되 1차 기준 구현은 Dijkstra로 통일한다.
+The initial comparison covered `Given Order / NN / NN + 2-opt / Brute Force`. It later expanded to DP, Conveyor-Aware, and selection according to workload. The initial four methods remain as baselines and verification tools. Dijkstra is a shared aisle-distance computation layer, not a competing visiting-order algorithm. A* remains an earlier candidate for consideration, while Dijkstra is the proposed initial reference implementation.
 
-`G = (V, E, w)`에서 노드는 통로 교차점과 실제로 접근 가능한 피킹 지점, 간선은 걸을 수 있는 통로, 가중치는 비음수 이동거리다. 선반 내부를 가로지르는 연결은 만들지 않는다. 좌표가 간선 중간에 있으면 해당 위치에 노드를 추가하고 간선을 분할한다.
+In `G = (V, E, w)`, nodes represent aisle intersections and accessible picking points, edges represent traversable aisle segments, and weights are nonnegative travel distances. Edges must not pass through shelves. If a location lies inside an edge, insert a node and split that edge at the location.
 
-1차 설계는 정적·무방향 그래프다. `S`는 작업별 시작점, `C`는 환경에 고정된 인계점, `P = {p1, …, pn}`은 필수 방문 위치다. 동일 위치의 여러 수량은 한 번의 방문으로 묶고 수량·service time은 별도로 보존한다. 따라서 초기의 ‘물품 수’는 현재 구현에서 **중복 제거한 필수 위치 수 `n`**으로 명확히 한다.
+The initial graph is static and undirected. `S` is the task-specific start, `C` is the handoff point fixed in the environment, and `P = {p1, …, pn}` is the set of required locations. Multiple requested units at the same location are served in one visit, with quantities and service time retained separately. The earlier term “item count” is therefore made precise as the **number of distinct required picking locations `n`**.
 
-`d(u,v)`를 `G`의 최단거리라 하면 방문 순열 `π`의 비용은 다음과 같다.
+Let `d(u,v)` be the shortest-path distance in `G`. The cost of a visiting permutation `π` is:
 
 ```text
 L(π) = d(S, pπ1) + Σ[k=1..n−1] d(pπk, pπ(k+1)) + d(pπn, C)
 ```
 
-`n = 0`이면 `L = d(S,C)`다. 경로는 `C`로 끝나며 `C → S` 복귀 비용을 붙이지 않는다. 시작점이나 종점과 같은 위치의 요구는 해당 지점에서 충족되도록 처리한다.
+For `n = 0`, use `L = d(S,C)`. The route ends at `C`; no return cost from `C` to `S` is added. Requests located at the start or destination are fulfilled at that point.
 
-## 2. 파이프라인
+## 2. Pipeline
 
 ```text
-고정 환경 G, C + 작업 S, P
-  → 위치·연결성 검증 및 중복 위치 정리
-  → Dijkstra 거리 행렬과 경로 복원 정보
-  → 다섯 workload feature 추출
-  → 계산 예산을 고려한 알고리즘 선택
-  → 방문 순서 생성 + 선택적 2-opt
-  → 각 구간을 실제 통로 경로로 복원
-  → 방문·끝점·거리 검증 및 로그 저장
+Fixed environment G, C + Task S, P
+  → Validate locations and connectivity; consolidate duplicate locations
+  → Compute Dijkstra distance matrix and path-reconstruction information
+  → Extract five workload features
+  → Select an algorithm under the computation budget
+  → Generate a visiting order and optionally apply 2-opt
+  → Reconstruct each leg as an actual aisle path
+  → Validate coverage, endpoints, and distance; save logs
 ```
 
-### 공유 최단경로 계층
+### Shared Shortest-Path Layer
 
-`S ∪ P ∪ {C}`의 서로 다른 노드에서 Dijkstra를 실행하여 거리 행렬 `D`를 만든다. Binary heap 기준 한 출발점의 비용은 `O((|V|+|E|) log |V|)`이며, `m ≤ n+2`개 출발점에 대해 그 `m`배다. 거리 행렬은 `O(m²)` 공간을 사용한다. 전체 predecessor 정보를 보관하면 추가로 `O(m|V|)` 공간이 필요하므로, 지도 규모에 따라 경로 복원 시 재탐색하는 대안과 비교한다.
+Run Dijkstra from each distinct node in `S ∪ P ∪ {C}` to construct distance matrix `D`. With a binary heap, one source costs `O((|V|+|E|) log |V|)`; multiply this by the number of sources `m ≤ n+2`. The distance matrix uses `O(m²)` space. Retaining all predecessor information adds `O(m|V|)` space, so compare this with rerunning searches during path reconstruction as map size grows.
 
-고정 그래프의 캐시는 가능하지만 cache hit 여부와 최초 생성 비용을 기록한다. 모든 후보가 같은 캐시 조건을 사용한다. 도달 불가능한 필수 위치가 있으면 `infeasible`을 반환하며 무한대 거리를 유효 경로처럼 비교하지 않는다.
+Caching is possible for a fixed graph, but record cache hits and initial construction costs. All candidates must use the same cache conditions. If a required location is unreachable, return `infeasible` rather than treating an infinite distance as a valid route cost.
 
-최단구간이 다른 필수 위치를 중간에 통과할 수 있다. 방문 순서는 계획상의 순서이고, 실제 경로에서는 모든 요구 위치가 한 번 이상 방문되면 된다. ‘정확히 한 번 방문’ 제약은 실제 통로 노드에 부과하지 않는다. 통로·교차점 재방문도 허용한다.
+A shortest leg can pass through another required location. The visiting order is a planning sequence; the physical route only needs to cover every required location at least once. An “exactly once” restriction is not imposed on physical aisle nodes. Repeated traversal of aisles and intersections is allowed.
 
-## 3. 방문 순서 알고리즘
+## 3. Visiting-Order Algorithms
 
-### 주어진 순서와 Exhaustive Search
+### Given Order and Exhaustive Search
 
-주어진 입력 순서에 `S`, `C`를 붙인 경로를 기준선으로 둔다. 입력이 단순 집합이면 재현 가능한 생성 순서를 저장한다. 현장 작업자의 실제 판단을 측정한 기준선이라는 뜻은 아니다.
+Use the supplied input order with `S` and `C` attached as a baseline. If the input is a set, retain a reproducible generation order. This is not a baseline measured from real workers' decisions.
 
-Exhaustive Search는 `n!`개 순열의 비용을 비교한다. 각 순열을 `O(n)`에 평가하는 단순 구현은 `O(n·n!)` 시간이다. 작은 문제에서 DP와 heuristic 결과를 확인하는 정확해 도구로 사용한다. ‘n=5는 Exhaustive, n=10은 DP, n=30은 heuristic’이라는 이전 예시는 규모 차이를 설명하는 예시로 보존하며, 하드웨어와 예산에 독립적인 확정 임계값으로 쓰지 않는다.
+Exhaustive Search compares all `n!` permutations. A straightforward implementation that evaluates each in `O(n)` takes `O(n·n!)` time. It supplies exact solutions for checking DP and heuristics on small instances. Earlier examples such as “Exhaustive at n=5, DP at n=10, heuristics at n=30” illustrate scale differences; they are not fixed thresholds independent of hardware and budgets.
 
 ### Subset Dynamic Programming
 
-`F[M,j]`는 `S`에서 출발해 부분집합 `M`을 방문하고 `pj`에서 끝나는 최소 비용이다.
+`F[M,j]` is the minimum cost of starting at `S`, visiting subset `M`, and ending at `pj`.
 
 ```text
 F[{j},j] = d(S,pj)
@@ -59,60 +59,60 @@ F[M,j] = min(i ∈ M\{j}) { F[M\{j},i] + d(pi,pj) }
 L* = min(j ∈ P) { F[P,j] + d(pj,C) }
 ```
 
-부모 상태를 저장하여 순서를 복원한다. 시간은 `O(n²·2^n)`, 공간은 `O(n·2^n)`이다. Exhaustive보다 큰 문제를 다룰 수 있지만 다항시간 알고리즘은 아니다. 시간·메모리 한도를 초과한 실행은 정확해를 얻었다고 표시하지 않는다.
+Store parent states to reconstruct the order. Time complexity is `O(n²·2^n)` and space complexity is `O(n·2^n)`. DP can handle larger instances than Exhaustive Search, but remains exponential. A run that exceeds its time or memory limit must not be labeled as having found an exact solution.
 
 ### Nearest Neighbor
 
-현재 위치 `u`에서 미방문 위치 중 `d(u,p)`가 최소인 곳을 선택하고 반복한 뒤 `C`로 간다. 거리 행렬이 있으면 단순 구현은 `O(n²)`다. 동률은 고정된 위치 ID 순서로 처리한다. 빠른 기준선이며 전역 최적성을 보장하지 않는다.
+From the current location `u`, repeatedly choose the unvisited location minimizing `d(u,p)`, then travel to `C` after all locations are visited. A straightforward implementation with a distance matrix takes `O(n²)` time. Resolve ties by a fixed location-ID order. NN is a fast baseline without a global optimality guarantee.
 
-### Conveyor-Aware Greedy — 검증할 수식 제안
+### Conveyor-Aware Greedy — Proposed Formula for Evaluation
 
-이전 구상은 마지막 인계점의 영향을 greedy 결정에 반영한다는 수준이다. 수식과 계수는 아직 확정되지 않았으므로 다음을 **후보 정의**로 제안한다.
+The earlier idea was to incorporate the final handoff point into greedy decisions. The formula and coefficients remain open, so the following is a **candidate definition**:
 
 ```text
 score(u,p) = d(u,p) − λ · d(p,C),  λ ≥ 0
-선택 = 미방문 위치 중 score가 최소인 p
+Choose the unvisited p with the minimum score
 ```
 
-이는 먼 물품을 먼저 처리하여 인계점 부근 물품을 후반에 남기려는 가설이다. `λ=0`이면 NN으로 환원된다. `d(p,C)`를 더하는 규칙은 오히려 인계점 가까운 물품을 먼저 선택하는 편향이 있으므로, 의도를 구분하지 않고 같은 방식으로 부르지 않는다. 어느 방향이 더 좋은지는 workload에 따라 달라질 수 있다.
+The hypothesis is that serving distant items earlier may leave items near the handoff point for the later part of the route. At `λ=0`, the rule reduces to NN. Adding `d(p,C)` instead would favor locations near the handoff point earlier; these intentions should be distinguished when defining a rule. Which direction works better may depend on workload.
 
-계수 후보는 보정 집합에서 선택하고 평가 시 고정한다. 점수는 다음 위치를 고르는 기준일 뿐 실제 경로 비용은 항상 `L(π)`로 평가한다. 성능 개선이나 최적성 보장은 없다. 단순 구현 시간은 NN과 같은 `O(n²)`다.
+Choose coefficient values on the calibration set and freeze them for evaluation. The score only selects the next location; actual route cost is always measured by `L(π)`. Neither improvement nor optimality is guaranteed. The straightforward implementation takes `O(n²)` time, as does NN.
 
-### 고정 끝점 2-opt
+### 2-opt with Fixed Endpoints
 
-경로를 `r = [S, …, C]`로 두고 내부 피킹 위치 구간 `r[i..j]`만 뒤집는다. 시작점과 종점은 이동시키지 않는다. 현재 무방향 거리 행렬에서는 경계 네 항의 변화만 평가한다.
+Represent a route as `r = [S, …, C]` and reverse only an internal segment of picking locations `r[i..j]`. Keep the start and destination fixed. For the current undirected distance matrix, the cost change depends on four boundary terms:
 
 ```text
 Δ = d(r[i−1],r[j]) + d(r[i],r[j+1])
     − d(r[i−1],r[i]) − d(r[j],r[j+1])
 ```
 
-허용 오차를 넘는 개선(`Δ < −ε`)만 수락한다. 한 전체 탐색 pass는 `O(n²)`이며 `K` passes면 `O(Kn²)`다. 총 반복 횟수가 자동으로 고정되는 것은 아니다. 탐색 순서, first/best improvement, 최대 pass 또는 시간 예산은 구현 전에 정한다. NN과 Conveyor-Aware에 같은 개선 예산을 적용한다.
+Accept only improvements exceeding the numerical tolerance (`Δ < −ε`). A full search pass takes `O(n²)` and `K` passes take `O(Kn²)`. The number of iterations is not inherently fixed. Specify search order, first or best improvement, and a pass or time budget before implementation. Apply the same improvement budget to NN and Conveyor-Aware.
 
-향후 일방통행·혼잡으로 비대칭 비용을 쓰면 구간 내부의 역방향 비용도 달라지므로 이 네 항 공식만 재사용할 수 없다.
+If future one-way aisles or congestion create asymmetric costs, reversing a segment also changes its internal edge costs. The four-term formula alone would no longer be sufficient.
 
-## 4. Workload-aware selector
+## 4. Workload-Aware Selector
 
-입력은 `W = (n, dispersion, start_distance, conveyor_distance, pattern)`이다. 수식과 실제 창고 연계는 [Refinement](03-workload-model-refinement.md#3-현재의-5개-core-workload-feature)에 둔다. 원시 작업 데이터는 라우터에 그대로 전달하고, 이 다섯 값은 selector가 보는 요약이다.
+The input is `W = (n, dispersion, start_distance, conveyor_distance, pattern)`. Formulas and operational connections are maintained in [Refinement](03-workload-model-refinement.md#3-current-five-core-workload-features). The router still receives the full task data; these five values are the selector's summary.
 
-초기 구현은 해석 가능한 규칙을 제안한다.
+The proposed initial implementation uses interpretable rules:
 
-1. 보정 실험으로 시간·메모리 예산 내 실행 가능한 exact 범위를 정한다.
-2. 그 범위에서 Exhaustive 또는 DP를 선택한다.
-3. 나머지 범위에서는 보정 데이터의 품질·비용을 근거로 NN, Conveyor-Aware, 각각의 2-opt 조합을 선택한다.
-4. 평가 집합에서는 규칙·임계값·계수를 바꾸지 않는다. 특징 전체를 쓰는 규칙이 물품 수만 쓰는 규칙보다 나은지 검증한다.
+1. Use calibration experiments to identify the range in which exact methods fit the time and memory budgets.
+2. Select Exhaustive Search or DP within that range.
+3. Outside that range, select NN, Conveyor-Aware, or their 2-opt combinations according to quality and cost observed on calibration data.
+4. Freeze rules, thresholds, and coefficients during evaluation. Test whether using all features improves on selection using item count alone.
 
-분산도가 높으면 무조건 2-opt를 쓰는 등의 규칙은 아직 가설이다. 모든 후보를 먼저 실행한 뒤 가장 짧은 것을 선택한 결과는 offline oracle 비교용이며 실제 selector 성능과 구분한다. 예산 초과 시 중단된 exact 실행을 최적으로 표시하지 않으며, 실행 가능한 NN 경로를 먼저 확보하는 fallback 정책을 구현 시 구체화한다. 예산 안에서 fallback까지 끝나는지도 측정해야 한다.
+Rules such as always using 2-opt at high dispersion remain hypotheses. Running every candidate and then choosing the shortest route provides an offline oracle comparison, not actual selector performance. Interrupted exact runs must not be labeled optimal. Specify a fallback policy that first obtains a feasible NN route, and measure whether the fallback itself completes within the budget.
 
-## 5. 인터페이스 및 기록 제안
+## 5. Proposed Interfaces and Logging
 
-| 구분 | 필수 정보 |
+| Category | Required information |
 |---|---|
-| 환경 | graph/layout version, 거리 단위, 고정 `C`, 방향성, 걷기 속도·피킹 시간 가정 |
-| 작업 | instance ID, seed, `S`, 요청 위치·수량, 중복 제거 후 `n`, 생성 패턴과 실제 feature 값 |
-| 실행 | 후보/선택 알고리즘, 선택 규칙 version, 계수, 2-opt 예산, 제한 시간, cache 조건 |
-| 결과 | 방문 순서, 통로 경로, 이동거리, 단계별·전체 계산시간, exact/feasible/timeout/infeasible 상태 |
+| Environment | Graph/layout version, distance units, fixed `C`, directionality, walking-speed and picking-time assumptions |
+| Task | Instance ID, seed, `S`, requested locations and quantities, distinct-location count `n`, generation pattern, realized feature values |
+| Execution | Candidate or selected algorithm, selection-rule version, coefficients, 2-opt budget, time limit, cache conditions |
+| Result | Visiting order, aisle path, travel distance, stage-level and total computation times, exact/feasible/timeout/infeasible status |
 
-걷기 속도 `v`와 위치별 처리시간 `t_i`를 고정하면 `T = L/v + Σt_i`로 단순 이동·처리시간을 추정할 수 있다. 계산 지연은 별도로 보고한다. 이는 혼잡·휴식·작업자 차이를 반영한 실제 작업시간 예측 모델은 아니다.
+With fixed walking speed `v` and location service times `t_i`, a simple travel-and-service estimate is `T = L/v + Σt_i`. Report computation latency separately. This is not a prediction of actual work time accounting for congestion, breaks, or differences between workers.
 
-문서 간 일관성, 수식, 링크는 문서 작성 시 검토한다. 실제 구현의 정확성·성능 검증은 [Proposal의 검증 계획](01-interdeliverable-proposal.md#4-검증과-실험-설계)을 따른다.
+Review cross-document consistency, formulas, and links during documentation. Future implementation correctness and performance checks follow the [Proposal's validation plan](01-interdeliverable-proposal.md#4-validation-and-experimental-design).

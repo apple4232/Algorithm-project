@@ -1,54 +1,54 @@
-# Direction Summary: 프로젝트 방향성 중간 요약 (11/2)
+# Direction Summary: Interim Project Direction (November 2)
 
-기준일: 2026-11-02 · 상태: 프로젝트 방향 중간 정리
+As of: 2026-11-02 · Status: Interim summary of project direction.
 
-## 1. 현재 프로젝트가 향하는 곳
+## 1. Current Project Direction
 
-출발점은 바구니 단위 OB 피킹에서 작업자의 이동거리를 줄이는 것이었다. 현재는 한 단계 더 나아가 **어떤 workload에서 어떤 routing 알고리즘을 선택하는 것이 합리적인가**를 살펴본다. 빠른 알고리즘과 정확한 알고리즘의 차이를 거리와 계산비용 양쪽에서 설명하는 것이 핵심이다.
+The starting point was reducing picker travel distance in basket-level outbound (OB) picking. The current question goes further: **Which routing algorithm is appropriate for which workload?** The focus is on explaining differences between fast and exact methods in both route distance and computational cost.
 
-여기서 Logistics는 보관·이송·출고 등 전체 물류 맥락이고, Operations는 그 안의 구체적 작업 운영이다. 현재 연구 대상은 창고 내부의 수동 피킹과 경로 선택이다. 배송차량의 도로 경로나 풀필먼트센터 전체 최적화로 범위를 넓히지 않는다.
+Here, logistics refers to the broader context of storage, movement, and outbound flow, while operations refers to the specific activities carried out within that context. The current research addresses manual warehouse picking and route selection. Delivery-vehicle road routing and optimization of an entire fulfillment center remain outside this scope.
 
-## 2. 지금까지의 방향 정리
+## 2. How the Direction Has Been Refined
 
-| 초기 관점 | 검토를 거친 현재 방향 |
+| Initial perspective | Current direction after review |
 |---|---|
-| 약 10개 물품에 대한 동선 개선 | 여러 크기·공간 특성의 작업에서 알고리즘 trade-off 평가. 초기 규모는 예시로 유지 |
-| 여러 알고리즘의 단순 비교 | 비교 결과를 기반으로 workload-aware selection의 효용 검증 |
-| 많은 운영·공간 변수를 모두 입력 후보로 고려 | 6개 후보를 거쳐 5개 core workload feature와 고정 환경으로 분리 |
-| 실제 대형 센터의 크기를 그대로 참고 | 하나의 manual PTG picking zone을 통제된 그래프로 모델링 |
-| 최종 conveyor로 이동 | 실제 공정 차이를 고려해 outbound와 연결된 고정 handoff point로 정의 |
+| Improve a route for approximately 10 items | Evaluate algorithm trade-offs across task sizes and spatial characteristics; retain the initial scale as an example |
+| Compare several algorithms | Use the comparison to test the value of workload-aware selection |
+| Consider many operational and spatial variables as inputs | Narrow through six candidates to five core workload features and a fixed environment |
+| Use the full scale of a large facility as a reference | Model one manual PTG picking zone as a controlled graph |
+| Travel to a final conveyor | Define a fixed handoff point connected to outbound processing to accommodate differences in real workflows |
 
-이 과정은 초기 아이디어를 없앤 것이 아니다. 실험으로 답할 수 있는 질문을 먼저 정하고 이후 확장할 항목을 구분한 것이다. 자세한 근거는 [Workload Model Refinement](03-workload-model-refinement.md)에 보존한다.
+This refinement preserves the initial ideas while identifying questions that can be answered experimentally and topics that require later extensions. The detailed rationale remains in [Workload Model Refinement](03-workload-model-refinement.md).
 
-## 3. 현재 합의된 범위와 남은 결정
+## 3. Current Scope and Open Decisions
 
-현재 방향은 고정 레이아웃·고정 인계점, single-picker, 정적 피킹 위치다. Workload는 물품 수, 물품 간 분산, 시작점에서의 거리, 인계점까지의 거리, 공간 패턴으로 요약한다. 통로 최단경로와 물품 방문 순서는 별도 계층으로 다룬다.
+The current direction uses a fixed layout, a fixed handoff point, one picker, and static picking locations. Workload is summarized by item count, item dispersion, distance from the start, distance to the handoff point, and spatial pattern. Aisle shortest paths and item visiting order are handled in separate layers.
 
-아직 확정하지 않은 사항은 수치 레이아웃, 물품 수 구간과 반복 수, 계산 예산, Conveyor-Aware의 구체 수식·계수, selector의 임계값이다. [Algorithm Design](02-algorithm-design.md)의 구체화 제안은 검증할 후보이며 확정된 구현 성과가 아니다.
+Open decisions include numerical layout settings, item-count ranges and repetition counts, computation budgets, the specific Conveyor-Aware formula and coefficients, and selector thresholds. The detailed proposals in [Algorithm Design](02-algorithm-design.md) are candidates for validation, not established implementation results.
 
-쿠팡 공개 사례는 운영 동기를 제공하고 학술 문헌은 모델과 방법을 뒷받침한다. 합성 창고와 workload를 실제 쿠팡 내부 데이터로 소개하지 않는다. Related Work와 링크는 [Proposal](01-interdeliverable-proposal.md#5-related-work와-레퍼런스)에서 관리한다.
+Public Coupang examples provide operational motivation, while academic literature supports the modeling and methods. Synthetic warehouses and workloads are not presented as internal Coupang data. Related work and reference links are maintained in the [Proposal](01-interdeliverable-proposal.md#5-related-work-and-references).
 
-## 4. Multi-picker 환경으로의 확장성
+## 4. Extension to Multiple Pickers
 
-수십 명의 picker가 동시에 일하는 환경은 장기 방향이다. Single-picker의 최단 경로를 여러 명에게 독립적으로 주는 것만으로 전체 시스템이 좋아진다고 볼 수 없다. 같은 통로로 경로가 집중되면 대기와 간섭으로 총 처리량이 나빠질 수 있다.
+An environment with dozens of simultaneous pickers is a long-term direction. Giving every picker an independently optimized route does not necessarily improve the overall system. Concentrating routes in the same aisles can create waiting and interference that reduce throughput.
 
-| 단계 | 추가 질문 | 필요한 변화 |
+| Stage | Additional question | Required changes |
 |---|---|---|
-| 1. Single-picker 검증 | workload별로 품질·계산비용이 어떻게 다른가? | 현재 다섯 피처, 고정 거리, 정확해와 heuristic 비교 |
-| 2. Layout 일반화 | 다른 통로 구조에서도 규칙이 유효한가? | 레이아웃별 평가, 재보정 필요성·거리 정규화 검토 |
-| 3. Multi-picker 시뮬레이션 | 독립 경로들이 만나면 어떤 병목이 생기는가? | 작업 도착 시각, picker 상태, 통로 점유·추월·대기 규칙 |
-| 4. 작업 배분과 경로 조정 | 누구에게 어떤 작업을 줄 것인가? 언제 재계산할 것인가? | 할당과 routing의 결합, 동적 비용과 조정 정책 |
+| 1. Single-picker validation | How do quality and computational cost vary with workload? | Current five features, static distances, and exact-versus-heuristic comparisons |
+| 2. Generalization across layouts | Do selection rules remain useful under different aisle structures? | Evaluation by layout, assessment of recalibration needs, and possible distance normalization |
+| 3. Multi-picker simulation | What bottlenecks emerge when independently planned routes interact? | Task arrival times, picker states, and rules for aisle occupancy, passing, and waiting |
+| 4. Task allocation and route coordination | Which picker should receive each task, and when should routes be recomputed? | Joint assignment and routing, dynamic costs, and coordination policies |
 
-Multi-picker에서는 총 이동거리 외에도 throughput, 작업 완료시간과 makespan, 대기시간, 혼잡, 작업량 균형을 평가해야 한다. 시간에 따라 변하는 비용을 도입하면 정적 Dijkstra 거리와 2-opt 가정부터 재검토해야 한다. 현재의 feature extractor와 알고리즘 비교 구조는 재사용 가능한 출발점이지만, 다섯 피처가 혼잡까지 충분히 설명한다고 가정하지 않는다.
+Multi-picker evaluation should include throughput, task completion time, makespan, waiting time, congestion, and workload balance in addition to total distance. Introducing time-varying costs requires revisiting assumptions behind static Dijkstra distances and 2-opt. The current feature-extraction and algorithm-comparison structure provides a reusable starting point, but the five features are not assumed to explain congestion adequately.
 
-수십 명이라는 규모는 확장 실험의 목표이며 현재 구현·검증된 지원 규모가 아니다. Picker 수와 작업 도착률을 단계적으로 늘려 병목을 측정한 뒤 알고리즘을 추가한다.
+Dozens of pickers is an extension target, not a currently implemented or validated capacity. Increase picker count and task arrival rates incrementally, measure bottlenecks, and then introduce additional algorithms.
 
-## 5. 다음 실행 순서와 문서 관리
+## 5. Next Steps and Document Maintenance
 
-1. 환경과 workload 생성 규칙을 확정하고 가정·단위를 기록한다.
-2. 거리 계산과 작은 사례의 Exact/DP 일치부터 확인한다.
-3. NN, Conveyor-Aware, 같은 예산의 2-opt 조합을 비교한다.
-4. 보정·평가 데이터를 분리해 고정 정책, 물품 수만 쓰는 선택, 다섯 피처 선택을 비교한다.
-5. 결과를 보고 현 범위를 유지·수정한 뒤 layout 변화와 multi-picker로 확장한다.
+1. Finalize the environment and workload generation rules, recording assumptions and units.
+2. Verify distance computation and agreement between exact methods on small instances.
+3. Compare NN, Conveyor-Aware, and their 2-opt combinations under the same improvement budget.
+4. Separate calibration and evaluation data; compare a fixed policy, item-count-only selection, and five-feature selection.
+5. Use the results to retain or revise the current scope before extending to layout variation and multiple pickers.
 
-문서 역할은 Proposal=연구·방법·검증·Related Work, Algorithm Design=기술 명세, Refinement=변수 정제 이력과 현실 연결, 이 요약=방향·우선순위·확장이다. 이번 네 문서는 비어 있는 저장소에 최초로 추가하며 기존 프로젝트 참조 파일은 변경하지 않는다. 이후에는 기존 기록을 삭제하기보다 현재 결정과 변경 이유를 덧붙인다.
+Document responsibilities remain distinct: Proposal covers research, methods, validation, and related work; Algorithm Design covers technical specifications; Refinement preserves variable-refinement history and operational connections; this summary covers direction, priorities, and extensions. The four documents were initially added to an empty repository without changing the existing project reference materials. This English revision retains their content and decision history; the earlier Korean version remains available in Git history. Future revisions should record the current decision and its rationale alongside the earlier context.
