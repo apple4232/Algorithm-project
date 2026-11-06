@@ -2,6 +2,8 @@
 
 As of: 2026-11-02 · Status: Technical design prior to implementation.
 
+**Implementation update - November 6, 2026:** The original design below is retained. Stages 1-3 now implement the shared shortest-path layer, visit-order methods, and common 2-opt. The implementation separates CA-plus and CA-minus, with development guards and NN fallback behavior described in the [baseline](05-implementation-baseline.md). See the [completion report](06-stage2-stage3-completion.md) for verified behavior; the workload selector remains future work.
+
 Research questions, experiments, and references are maintained in the [Proposal](01-interdeliverable-proposal.md). The rationale and history behind the feature definitions are maintained in [Refinement](03-workload-model-refinement.md). Detailed proposals in this document do not imply completed implementation or final agreement in the earlier conversation.
 
 ## 1. Design Revisions and Current Problem

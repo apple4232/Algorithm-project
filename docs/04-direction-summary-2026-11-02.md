@@ -2,6 +2,8 @@
 
 As of: 2026-11-02 · Status: Interim summary of project direction.
 
+**Implementation update - November 6, 2026:** The project has completed its warehouse and routing foundation through Stage 3. The [README](../README.md) describes the current scope and the [completion report](06-stage2-stage3-completion.md) records 27 passing tests. Full workload experiments, selector validation, and multi-picker extensions remain future work. The dated direction summary below is preserved.
+
 ## 1. Current Project Direction
 
 The starting point was reducing picker travel distance in basket-level outbound (OB) picking. The current question goes further: **Which routing algorithm is appropriate for which workload?** The focus is on explaining differences between fast and exact methods in both route distance and computational cost.

@@ -2,6 +2,8 @@
 
 As of: 2026-11-02 · Status: Definition of workload scope and experimental variables.
 
+**Implementation update - November 6, 2026:** This document retains the feature-refinement history. The fixed synthetic environment adopted for development is specified in the [baseline](05-implementation-baseline.md). Feature extraction and workload generation are not yet implemented. The [plan review](07-plan-review-and-decisions.md) records the open question of whether the first selector should use the synthetic pattern label.
+
 ## 1. Purpose
 
 This document preserves the factors considered initially rather than presenting only the final five. It explains the current model through `Initial idea → Review → Reclassification → Current scope → Future extensions`. The title **Workload Model Refinement** replaces the earlier phrase “Design Evolution,” which overstated the scale of the revision.

@@ -2,6 +2,8 @@
 
 As of: 2026-11-02 · Status: Research proposal and experimental plan; implementation and experimental results are pending.
 
+**Implementation update - November 6, 2026:** This document preserves the November 2 research plan. The warehouse and routing foundation is now implemented and verified through Stage 3. See the [current README](../README.md), [completion report](06-stage2-stage3-completion.md), and [plan review](07-plan-review-and-decisions.md). The full workload experiments and selector are still pending.
+
 ## Document Scope and Editorial Principles
 
 This document covers the research questions, methodology, validation plan, and related work. Technical specifications belong in [Algorithm Design](02-algorithm-design.md), the rationale and history of variable refinement in [Workload Model Refinement](03-workload-model-refinement.md), and the overall direction and extensions in [Direction Summary](04-direction-summary-2026-11-02.md).
@@ -78,7 +80,7 @@ Compare (a) one algorithm for every task, (b) selection using item count alone, 
 
 ### Correctness Checks to Implement
 
-On small cases, check agreement between Exhaustive Search and DP, preservation of `S` and `C`, coverage of all required locations, aisle connectivity, and consistency of the reported distance with the reconstructed route. Verify that 2-opt does not worsen its initial route. Include empty tasks, one-item tasks, duplicate locations, and unreachable locations. The current repository contains documentation; these implementation checks have not yet been performed.
+On small cases, check agreement between Exhaustive Search and DP, preservation of `S` and `C`, coverage of all required locations, aisle connectivity, and consistency of the reported distance with the reconstructed route. Verify that 2-opt does not worsen its initial route. Include empty tasks, one-item tasks, duplicate locations, and unreachable locations. These checks were planned on November 2; the checks completed on November 6 are recorded in the [implementation report](06-stage2-stage3-completion.md).
 
 ## 5. Related Work and References
 
