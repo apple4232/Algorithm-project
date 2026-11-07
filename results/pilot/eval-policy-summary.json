@@ -1,0 +1,86 @@
+{
+  "count": {
+    "attempts": 90,
+    "statuses": {
+      "completed": 90
+    },
+    "terminations": {
+      "": 90
+    },
+    "feasible_completed": 90,
+    "median_distance": 120.0,
+    "median_seconds": 0.0013685835001524538,
+    "p90_seconds": 0.006547583994688466,
+    "mean_gap_percent": 0.0,
+    "gap_count": 90,
+    "mean_nn_improvement_percent": null,
+    "nn_pair_count": 0,
+    "nn_paired_group_count": 0,
+    "nn_paired_mean_difference_ci95_m": null,
+    "zero_optimum_mean_difference_m": null,
+    "mean_offline_regret_m": 0.0
+  },
+  "fixed": {
+    "attempts": 90,
+    "statuses": {
+      "completed": 90
+    },
+    "terminations": {
+      "": 90
+    },
+    "feasible_completed": 90,
+    "median_distance": 120.0,
+    "median_seconds": 0.0013766039919573814,
+    "p90_seconds": 0.006548624980496243,
+    "mean_gap_percent": 0.0,
+    "gap_count": 90,
+    "mean_nn_improvement_percent": null,
+    "nn_pair_count": 0,
+    "nn_paired_group_count": 0,
+    "nn_paired_mean_difference_ci95_m": null,
+    "zero_optimum_mean_difference_m": null,
+    "mean_offline_regret_m": 0.0
+  },
+  "numeric": {
+    "attempts": 90,
+    "statuses": {
+      "completed": 90
+    },
+    "terminations": {
+      "": 90
+    },
+    "feasible_completed": 90,
+    "median_distance": 120.0,
+    "median_seconds": 0.0013698335242224857,
+    "p90_seconds": 0.00654687499627471,
+    "mean_gap_percent": 0.0,
+    "gap_count": 90,
+    "mean_nn_improvement_percent": null,
+    "nn_pair_count": 0,
+    "nn_paired_group_count": 0,
+    "nn_paired_mean_difference_ci95_m": null,
+    "zero_optimum_mean_difference_m": null,
+    "mean_offline_regret_m": 0.0
+  },
+  "numeric_pattern": {
+    "attempts": 90,
+    "statuses": {
+      "completed": 90
+    },
+    "terminations": {
+      "": 90
+    },
+    "feasible_completed": 90,
+    "median_distance": 120.0,
+    "median_seconds": 0.0013684584992006421,
+    "p90_seconds": 0.006535708002047613,
+    "mean_gap_percent": 0.0,
+    "gap_count": 90,
+    "mean_nn_improvement_percent": null,
+    "nn_pair_count": 0,
+    "nn_paired_group_count": 0,
+    "nn_paired_mean_difference_ci95_m": null,
+    "zero_optimum_mean_difference_m": null,
+    "mean_offline_regret_m": 0.0
+  }
+}

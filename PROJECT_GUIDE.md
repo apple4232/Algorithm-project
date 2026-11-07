@@ -30,9 +30,9 @@ Stages 1-3 are complete: implementation criteria, the warehouse and distance lay
 
 The final suite at that checkpoint passed 27 automated tests on Python 3.12.2. The checks cover exact-method agreement, valid aisle paths, special inputs, Conveyor-Aware behavior, 2-opt improvements, and limit handling. This is correctness evidence, not a large performance experiment.
 
-The workload feature extractor, A-H batch generator, full experiment runner, automatic selector, and Streamlit UI are not implemented. The proposed 1,620-task experiment has not been generated or evaluated.
+The Role B experiment package now includes feature extraction, seeded workload generation, candidate and request measurements, offline rule training and held-out evaluation. The request runner has not integrated the rules; Streamlit remains unimplemented. See [Role B experiments](docs/08-role-b-experiments.md).
 
-Algorithm development currently stops after Stage 3. Documentation and repository publication have been completed for that checkpoint. Future feature work requires a new task from the project owner; a roadmap entry is not itself authorization to implement it.
+The Stage 3 routing checkpoint remains documented separately. Role B experiment development was subsequently requested and is documented in [Role B experiments](docs/08-role-b-experiments.md).
 
 For the evidence behind this snapshot, see the [completion report](docs/06-stage2-stage3-completion.md).
 
@@ -92,7 +92,7 @@ B gives C verified figures and conclusions, including units, sample counts, cond
 
 All candidates have been compared under documented common conditions. Related tasks remain in the same data split. Timing boundaries, cache conditions, limits, and failure treatment are recorded. Rules and coefficients are frozen before final evaluation, and conclusions are supported by results rather than expectations.
 
-B's planned workload and selector work is not yet implemented. The 27 correctness tests do not replace this experimental evaluation.
+B's experiment tools and offline selection study are implemented; see [Role B experiments](docs/08-role-b-experiments.md). Routing correctness tests do not replace experimental evaluation.
 
 ## 7. Role C: Presentation, Visualization, and Demonstration
 

@@ -4,7 +4,7 @@ This project asks a practical question: **when one picker must collect items and
 
 The picker starts at `S`, visits every required location in `P`, and finishes at `C`. The project compares route distance and computation time. Its longer-term goal is to build simple algorithm-selection rules from experiments, rather than assume one method is best for every order.
 
-**Current status - November 6, 2026:** the warehouse model, shortest-path layer, routing algorithms, and correctness checks are implemented. Workload-based selection, large experiments, and the UI are planned.
+**Current status - November 6, 2026:** the warehouse model, shortest-path layer, routing algorithms, and correctness checks are implemented. Role B experiment tools and an exploratory workload-selection study are implemented; the UI remains planned.
 
 ## 1. What does one task mean?
 
@@ -46,7 +46,7 @@ Fixed warehouse + task S, P, C
     -> return distance, timing, and execution status
 ```
 
-A future selector will sit between distance preparation and route generation. It is not implemented yet.
+The experiment package contains an offline rule trainer and held-out policy evaluation. The request runner still requires a manually selected algorithm; see [Role B experiments](docs/08-role-b-experiments.md).
 
 ## 3. What is implemented?
 
@@ -58,9 +58,9 @@ A future selector will sit between distance preparation and route generation. It
 | Routing candidates | Given Order, Exhaustive Search, Subset DP, NN, and two Conveyor-Aware directions |
 | Route improvement | One shared fixed-endpoint 2-opt implementation |
 | Request execution | Manually specified candidate, an NN fallback route, and stage timings |
-| Verification | 27 automated tests, including exact-solution agreement and failure handling |
+| Verification | Automated routing and experiment tests, including exact-solution agreement and failure handling |
 
-The five-feature extractor, A-H workload generator, experiment runner, selector, and Streamlit UI remain future work. The small inputs used by tests are correctness fixtures, not the planned experimental dataset.
+The experiment package provides feature extraction, seeded A-H workload views, batch measurements and offline selection rules. The production request runner has not integrated those rules, and Streamlit remains future work. See [Role B experiments](docs/08-role-b-experiments.md).
 
 ### The warehouse
 
@@ -137,7 +137,7 @@ Coordinates must be existing graph nodes. Available shelf locations are in `grap
 
 The request runner first obtains an NN route. If the requested candidate stops, it returns the shorter feasible route among the available candidate and NN routes. It preserves the requested failure status: a returned route does not turn a timeout into a successful exact run.
 
-For direct candidate comparisons, use `Task.create`, `prepare_distances`, and `solve`. This interface reuses one distance table and does not run the NN fallback automatically. The batch benchmark itself is future work.
+For direct candidate comparisons, use `Task.create`, `prepare_distances`, and `solve`. This interface reuses one distance table and does not run the NN fallback automatically. The batch benchmark is available in `experiments`.
 
 ### Initial limits
 
@@ -157,7 +157,7 @@ The memory guard estimates the DP cost and parent arrays. It does not cap total 
 
 ## 6. What has been verified?
 
-The 27 tests cover warehouse structure, aisle-only paths, exact-method agreement, route coverage, empty and duplicate requests, endpoint requests, zero-length edges, unreachable inputs, limit handling, and fallback reporting.
+The original 27 routing tests cover warehouse structure, aisle-only paths, exact-method agreement, route coverage, empty and duplicate requests, endpoint requests, zero-length edges, unreachable inputs, limit handling, and fallback reporting.
 
 A useful counterexample is a straight aisle with S = 8, required locations 1 and 9, and C = 0:
 
@@ -171,7 +171,7 @@ This demonstrates why destination-aware scoring must be tested rather than assum
 
 ## 7. What will the experiments study?
 
-The planned workload description has five features:
+The workload description has five features:
 
 | Feature | Meaning |
 |---|---|
@@ -183,9 +183,9 @@ The planned workload description has five features:
 
 Layout and C stay fixed. Pattern and the numerical features can be correlated, so results must record realized distances rather than assume independent factors.
 
-The implementation plan proposes 1,620 tasks from six sizes, three patterns, three starts, and 30 seeds. Related tasks must remain together when splitting development and evaluation data. This dataset has not been generated or evaluated.
+The implementation plan proposes 1,620 tasks from six sizes, three patterns, three starts, and 30 seeds. Related tasks must remain together when splitting development and evaluation data. The experiment package can generate this base and additional A/B sizes and F pairs; see [Role B experiments](docs/08-role-b-experiments.md).
 
-The selector's rules and Conveyor-Aware settings will be derived from development experiments, then frozen before evaluation. Whether the first selector uses four numerical features or also uses the synthetic pattern label remains an explicit design decision.
+The offline study fits rules on development data, freezes them, and compares count-only, numerical and synthetic-pattern inputs on held-out groups. It does not integrate the rules into the request runner.
 
 ## 8. Where should I look next?
 
@@ -198,9 +198,25 @@ The selector's rules and Conveyor-Aware settings will be derived from developmen
 | [Implementation baseline](docs/05-implementation-baseline.md) | Initial settings, interfaces, and stage completion criteria |
 | [Completion report](docs/06-stage2-stage3-completion.md) | Implemented behavior, tests, examples, and limitations |
 | [Plan review and open decisions](docs/07-plan-review-and-decisions.md) | Differences between the PDF plan and earlier design |
+| [Role B experiments](docs/08-role-b-experiments.md) | Reproduction, workload generation, measurements, and offline selection |
+| [Role B results](docs/09-role-b-results.md) | Held-out exploratory findings and their limitations |
 
-The November 2 documents retain the earlier research design. The baseline and completion report describe the current implementation.
+The November 2 documents retain the earlier research design. The baseline and completion report describe the earlier routing checkpoint; the Role B document describes the subsequent experiment workflow.
 
 Source code is in `picking/`; correctness tests are in `tests/`.
 
-The next implementation stage is workload generation and reproducible experiments, followed by selector development and a small UI. Work currently stops after the routing implementation and its correctness checks.
+The experiment workflow and offline selector evaluation are described in [Role B experiments](docs/08-role-b-experiments.md). Production integration and a UI remain separate work.
+
+## Local demonstration
+
+Start the saved-results viewer from the repository root:
+
+```sh
+python3 -m demo
+```
+
+Open `http://127.0.0.1:8765/` in a browser. Python 3 is the only runtime dependency. Use `--port 8766` if the default port is occupied. The server is available only on this computer; stop it with Ctrl+C.
+
+The page compares the stored candidate or complete-request records and animates reconstructed aisle paths. A–H are overlapping experimental views. F and H automatically select the matching task on the second map; other views compare two algorithms on the same task. The recalculation button executes only the selected candidates, retains the saved data, and labels newly measured times separately. Conditions and timeouts can change the result. The graph animation is explanatory, not a measurement of physical walking time.
+
+The viewer requires `results/full/tasks.jsonl`, `rules.json`, and the development/evaluation candidate/request JSONL files. If they are unavailable, follow [Role B experiments](docs/08-role-b-experiments.md) to recreate the data, placing the output in `results/full`. The files are large and loading takes a few seconds. The UI never rewrites the experiment records.

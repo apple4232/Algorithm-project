@@ -1,0 +1,1 @@
+{"task_id": "100:3:clustered:0", "algorithm": "dp", "result": {"algorithm": "dp", "status": "completed", "order": [[4, 14], [4, 38], [12, 10]], "distance": 112.0, "optimal": true, "termination": "completed", "elapsed_seconds": 3.083300543949008e-05, "details": {"dp_buffer_bytes": 288}}, "peak_rss_bytes": 19578880, "scope": "whole process including interpreter and preprocessing"}

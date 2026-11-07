@@ -1,0 +1,24 @@
+{
+  "rules": {
+    "fixed": {
+      "algorithm": "dp"
+    },
+    "count": {
+      "algorithm": "dp"
+    },
+    "numeric": {
+      "algorithm": "dp"
+    },
+    "numeric_pattern": {
+      "algorithm": "dp"
+    }
+  },
+  "training_task_count": 90,
+  "training_groups": [
+    "0",
+    "2"
+  ],
+  "budget_seconds": 0.2,
+  "coefficient": 1.0,
+  "note": "Development resubstitution fit; synthetic pattern labels are generator metadata."
+}

@@ -1,0 +1,901 @@
+{
+  "ca-minus": {
+    "attempts": 2025,
+    "statuses": {
+      "completed": 2025
+    },
+    "terminations": {
+      "completed": 2025
+    },
+    "feasible_completed": 2025,
+    "median_distance": 160.0,
+    "median_seconds": 0.0012271250016056001,
+    "p90_seconds": 0.0056842080084607005,
+    "mean_gap_percent": 3.9331234711827703,
+    "gap_count": 1350,
+    "mean_nn_improvement_percent": 4.440855821186661,
+    "nn_pair_count": 2025,
+    "nn_paired_group_count": 15,
+    "nn_paired_mean_difference_ci95_m": [
+      7.9427160493827165,
+      9.874567901234569
+    ],
+    "zero_optimum_mean_difference_m": null,
+    "mean_difference_from_fixed_m": null,
+    "mean_offline_regret_m": 9.058765432098765,
+    "by_n": {
+      "3": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 96.0
+      },
+      "5": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 120.0
+      },
+      "7": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 144.0
+      },
+      "8": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 148.0
+      },
+      "10": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 164.0
+      },
+      "12": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 176.0
+      },
+      "15": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 204.0
+      },
+      "20": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 228.0
+      },
+      "50": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 268.0
+      }
+    },
+    "by_pattern": {
+      "clustered": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 132.0
+      },
+      "directional": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 176.0
+      },
+      "paired-far": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 164.0
+      },
+      "paired-near": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 160.0
+      },
+      "random-stow-like": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 192.0
+      }
+    }
+  },
+  "ca-minus+2opt": {
+    "attempts": 2025,
+    "statuses": {
+      "completed": 2025
+    },
+    "terminations": {
+      "local_optimum": 2025
+    },
+    "feasible_completed": 2025,
+    "median_distance": 156.0,
+    "median_seconds": 0.001257833995623514,
+    "p90_seconds": 0.006137958000181243,
+    "mean_gap_percent": 1.5288128430032468,
+    "gap_count": 1350,
+    "mean_nn_improvement_percent": 6.984512301372335,
+    "nn_pair_count": 2025,
+    "nn_paired_group_count": 15,
+    "nn_paired_mean_difference_ci95_m": [
+      13.584197530864197,
+      14.97679012345679
+    ],
+    "zero_optimum_mean_difference_m": null,
+    "mean_difference_from_fixed_m": null,
+    "mean_offline_regret_m": 3.6839506172839505,
+    "by_n": {
+      "3": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 96.0
+      },
+      "5": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 120.0
+      },
+      "7": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 140.0
+      },
+      "8": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 144.0
+      },
+      "10": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 160.0
+      },
+      "12": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 172.0
+      },
+      "15": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 196.0
+      },
+      "20": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 216.0
+      },
+      "50": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 260.0
+      }
+    },
+    "by_pattern": {
+      "clustered": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 128.0
+      },
+      "directional": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 172.0
+      },
+      "paired-far": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 156.0
+      },
+      "paired-near": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 156.0
+      },
+      "random-stow-like": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 188.0
+      }
+    }
+  },
+  "ca-plus": {
+    "attempts": 2025,
+    "statuses": {
+      "completed": 2025
+    },
+    "terminations": {
+      "completed": 2025
+    },
+    "feasible_completed": 2025,
+    "median_distance": 188.0,
+    "median_seconds": 0.0012298750225454569,
+    "p90_seconds": 0.00568291699164547,
+    "mean_gap_percent": 21.56898123662729,
+    "gap_count": 1350,
+    "mean_nn_improvement_percent": -10.948073710617951,
+    "nn_pair_count": 2025,
+    "nn_paired_group_count": 15,
+    "nn_paired_mean_difference_ci95_m": [
+      -20.015802469135803,
+      -17.977283950617284
+    ],
+    "zero_optimum_mean_difference_m": null,
+    "mean_difference_from_fixed_m": null,
+    "mean_offline_regret_m": 36.90271604938272,
+    "by_n": {
+      "3": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 108.0
+      },
+      "5": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 140.0
+      },
+      "7": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 168.0
+      },
+      "8": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 176.0
+      },
+      "10": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 188.0
+      },
+      "12": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 208.0
+      },
+      "15": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 232.0
+      },
+      "20": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 264.0
+      },
+      "50": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 308.0
+      }
+    },
+    "by_pattern": {
+      "clustered": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 156.0
+      },
+      "directional": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 212.0
+      },
+      "paired-far": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 188.0
+      },
+      "paired-near": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 188.0
+      },
+      "random-stow-like": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 232.0
+      }
+    }
+  },
+  "ca-plus+2opt": {
+    "attempts": 2025,
+    "statuses": {
+      "completed": 2025
+    },
+    "terminations": {
+      "local_optimum": 2020,
+      "evaluation_limit": 5
+    },
+    "feasible_completed": 2025,
+    "median_distance": 156.0,
+    "median_seconds": 0.001284209021832794,
+    "p90_seconds": 0.0062592919857706875,
+    "mean_gap_percent": 1.735125112980397,
+    "gap_count": 1350,
+    "mean_nn_improvement_percent": 6.665279030638623,
+    "nn_pair_count": 2025,
+    "nn_paired_group_count": 15,
+    "nn_paired_mean_difference_ci95_m": [
+      12.857283950617283,
+      14.194567901234567
+    ],
+    "zero_optimum_mean_difference_m": null,
+    "mean_difference_from_fixed_m": null,
+    "mean_offline_regret_m": 4.3990123456790124,
+    "by_n": {
+      "3": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 96.0
+      },
+      "5": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 120.0
+      },
+      "7": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 140.0
+      },
+      "8": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 144.0
+      },
+      "10": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 160.0
+      },
+      "12": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 172.0
+      },
+      "15": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 196.0
+      },
+      "20": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 216.0
+      },
+      "50": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 268.0
+      }
+    },
+    "by_pattern": {
+      "clustered": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 132.0
+      },
+      "directional": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 172.0
+      },
+      "paired-far": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 160.0
+      },
+      "paired-near": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 156.0
+      },
+      "random-stow-like": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 188.0
+      }
+    }
+  },
+  "dp": {
+    "attempts": 2025,
+    "statuses": {
+      "completed": 1350,
+      "timeout": 225,
+      "resource_limit": 450
+    },
+    "terminations": {
+      "completed": 1350,
+      "deadline": 225,
+      "dp_size": 450
+    },
+    "feasible_completed": 1350,
+    "median_distance": 136.0,
+    "median_seconds": 0.00149816699558869,
+    "p90_seconds": 0.026510333002079278,
+    "mean_gap_percent": 0.0,
+    "gap_count": 1350,
+    "mean_nn_improvement_percent": 8.373303803438965,
+    "nn_pair_count": 1350,
+    "nn_paired_group_count": 15,
+    "nn_paired_mean_difference_ci95_m": [
+      13.525925925925925,
+      15.037037037037036
+    ],
+    "zero_optimum_mean_difference_m": null,
+    "mean_difference_from_fixed_m": null,
+    "mean_offline_regret_m": 0.0,
+    "by_n": {
+      "3": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 96.0
+      },
+      "5": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 120.0
+      },
+      "7": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 140.0
+      },
+      "8": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 144.0
+      },
+      "10": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 156.0
+      },
+      "12": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 168.0
+      },
+      "15": {
+        "attempts": 225,
+        "completed": 0,
+        "median_distance_m": null
+      },
+      "20": {
+        "attempts": 225,
+        "completed": 0,
+        "median_distance_m": null
+      },
+      "50": {
+        "attempts": 225,
+        "completed": 0,
+        "median_distance_m": null
+      }
+    },
+    "by_pattern": {
+      "clustered": {
+        "attempts": 405,
+        "completed": 270,
+        "median_distance_m": 116.0
+      },
+      "directional": {
+        "attempts": 405,
+        "completed": 270,
+        "median_distance_m": 152.0
+      },
+      "paired-far": {
+        "attempts": 405,
+        "completed": 270,
+        "median_distance_m": 138.0
+      },
+      "paired-near": {
+        "attempts": 405,
+        "completed": 270,
+        "median_distance_m": 132.0
+      },
+      "random-stow-like": {
+        "attempts": 405,
+        "completed": 270,
+        "median_distance_m": 156.0
+      }
+    }
+  },
+  "exhaustive": {
+    "attempts": 2025,
+    "statuses": {
+      "completed": 675,
+      "resource_limit": 1350
+    },
+    "terminations": {
+      "completed": 675,
+      "exhaustive_size": 1350
+    },
+    "feasible_completed": 675,
+    "median_distance": 116.0,
+    "median_seconds": 0.0008077909878920764,
+    "p90_seconds": 0.0060009590233676136,
+    "mean_gap_percent": 0.0,
+    "gap_count": 675,
+    "mean_nn_improvement_percent": 6.613758464928673,
+    "nn_pair_count": 675,
+    "nn_paired_group_count": 15,
+    "nn_paired_mean_difference_ci95_m": [
+      8.948148148148148,
+      10.577777777777778
+    ],
+    "zero_optimum_mean_difference_m": null,
+    "mean_difference_from_fixed_m": null,
+    "mean_offline_regret_m": 0.0,
+    "by_n": {
+      "3": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 96.0
+      },
+      "5": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 120.0
+      },
+      "7": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 140.0
+      },
+      "8": {
+        "attempts": 225,
+        "completed": 0,
+        "median_distance_m": null
+      },
+      "10": {
+        "attempts": 225,
+        "completed": 0,
+        "median_distance_m": null
+      },
+      "12": {
+        "attempts": 225,
+        "completed": 0,
+        "median_distance_m": null
+      },
+      "15": {
+        "attempts": 225,
+        "completed": 0,
+        "median_distance_m": null
+      },
+      "20": {
+        "attempts": 225,
+        "completed": 0,
+        "median_distance_m": null
+      },
+      "50": {
+        "attempts": 225,
+        "completed": 0,
+        "median_distance_m": null
+      }
+    },
+    "by_pattern": {
+      "clustered": {
+        "attempts": 405,
+        "completed": 135,
+        "median_distance_m": 104.0
+      },
+      "directional": {
+        "attempts": 405,
+        "completed": 135,
+        "median_distance_m": 124.0
+      },
+      "paired-far": {
+        "attempts": 405,
+        "completed": 135,
+        "median_distance_m": 116.0
+      },
+      "paired-near": {
+        "attempts": 405,
+        "completed": 135,
+        "median_distance_m": 116.0
+      },
+      "random-stow-like": {
+        "attempts": 405,
+        "completed": 135,
+        "median_distance_m": 128.0
+      }
+    }
+  },
+  "given": {
+    "attempts": 2025,
+    "statuses": {
+      "completed": 2025
+    },
+    "terminations": {
+      "completed": 2025
+    },
+    "feasible_completed": 2025,
+    "median_distance": 280.0,
+    "median_seconds": 0.0012202500074636191,
+    "p90_seconds": 0.005533916992135346,
+    "mean_gap_percent": 63.790056835977,
+    "gap_count": 1350,
+    "mean_nn_improvement_percent": -97.53704125515738,
+    "nn_pair_count": 2025,
+    "nn_paired_group_count": 15,
+    "nn_paired_mean_difference_ci95_m": [
+      -217.72246913580247,
+      -210.62716049382715
+    ],
+    "zero_optimum_mean_difference_m": null,
+    "mean_difference_from_fixed_m": null,
+    "mean_offline_regret_m": 231.89333333333335,
+    "by_n": {
+      "3": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 120.0
+      },
+      "5": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 168.0
+      },
+      "7": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 216.0
+      },
+      "8": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 240.0
+      },
+      "10": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 276.0
+      },
+      "12": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 332.0
+      },
+      "15": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 408.0
+      },
+      "20": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 516.0
+      },
+      "50": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 1220.0
+      }
+    },
+    "by_pattern": {
+      "clustered": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 244.0
+      },
+      "directional": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 304.0
+      },
+      "paired-far": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 268.0
+      },
+      "paired-near": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 268.0
+      },
+      "random-stow-like": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 336.0
+      }
+    }
+  },
+  "nn": {
+    "attempts": 2025,
+    "statuses": {
+      "completed": 2025
+    },
+    "terminations": {
+      "completed": 2025
+    },
+    "feasible_completed": 2025,
+    "median_distance": 172.0,
+    "median_seconds": 0.0012104159977752715,
+    "p90_seconds": 0.0054547500039916486,
+    "mean_gap_percent": 10.210129402652663,
+    "gap_count": 1350,
+    "mean_nn_improvement_percent": 0.0,
+    "nn_pair_count": 2025,
+    "nn_paired_group_count": 15,
+    "nn_paired_mean_difference_ci95_m": [
+      0.0,
+      0.0
+    ],
+    "zero_optimum_mean_difference_m": null,
+    "mean_difference_from_fixed_m": null,
+    "mean_offline_regret_m": 17.92,
+    "by_n": {
+      "3": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 100.0
+      },
+      "5": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 128.0
+      },
+      "7": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 148.0
+      },
+      "8": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 156.0
+      },
+      "10": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 172.0
+      },
+      "12": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 188.0
+      },
+      "15": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 212.0
+      },
+      "20": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 236.0
+      },
+      "50": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 272.0
+      }
+    },
+    "by_pattern": {
+      "clustered": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 144.0
+      },
+      "directional": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 184.0
+      },
+      "paired-far": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 176.0
+      },
+      "paired-near": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 172.0
+      },
+      "random-stow-like": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 204.0
+      }
+    }
+  },
+  "nn+2opt": {
+    "attempts": 2025,
+    "statuses": {
+      "completed": 2025
+    },
+    "terminations": {
+      "local_optimum": 2022,
+      "evaluation_limit": 3
+    },
+    "feasible_completed": 2025,
+    "median_distance": 156.0,
+    "median_seconds": 0.0012682090164162219,
+    "p90_seconds": 0.006155542010674253,
+    "mean_gap_percent": 1.4142217745813686,
+    "gap_count": 1350,
+    "mean_nn_improvement_percent": 7.434310645854392,
+    "nn_pair_count": 2025,
+    "nn_paired_group_count": 15,
+    "nn_paired_mean_difference_ci95_m": [
+      14.556049382716049,
+      15.978271604938271
+    ],
+    "zero_optimum_mean_difference_m": null,
+    "mean_difference_from_fixed_m": null,
+    "mean_offline_regret_m": 2.694320987654321,
+    "by_n": {
+      "3": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 96.0
+      },
+      "5": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 120.0
+      },
+      "7": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 140.0
+      },
+      "8": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 144.0
+      },
+      "10": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 160.0
+      },
+      "12": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 172.0
+      },
+      "15": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 196.0
+      },
+      "20": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 216.0
+      },
+      "50": {
+        "attempts": 225,
+        "completed": 225,
+        "median_distance_m": 260.0
+      }
+    },
+    "by_pattern": {
+      "clustered": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 132.0
+      },
+      "directional": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 172.0
+      },
+      "paired-far": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 156.0
+      },
+      "paired-near": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 156.0
+      },
+      "random-stow-like": {
+        "attempts": 405,
+        "completed": 405,
+        "median_distance_m": 188.0
+      }
+    }
+  }
+}

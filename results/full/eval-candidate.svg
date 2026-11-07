@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="490" viewBox="0 0 900 490">
+<rect width="100%" height="100%" fill="white"/>
+<text x="75" y="23" font-family="sans-serif" font-size="16">Completed tasks: median route distance by item count</text>
+<path d="M75 45 V395 H605" fill="none" stroke="black"/>
+<text x="10" y="30" font-family="sans-serif" font-size="12">m</text>
+<text x="340.0" y="455" font-family="sans-serif" font-size="12">distinct item locations</text>
+<text x="75.0" y="415" text-anchor="middle" font-family="sans-serif" font-size="12">3</text>
+<text x="141.25" y="415" text-anchor="middle" font-family="sans-serif" font-size="12">5</text>
+<text x="207.5" y="415" text-anchor="middle" font-family="sans-serif" font-size="12">7</text>
+<text x="273.75" y="415" text-anchor="middle" font-family="sans-serif" font-size="12">8</text>
+<text x="340.0" y="415" text-anchor="middle" font-family="sans-serif" font-size="12">10</text>
+<text x="406.25" y="415" text-anchor="middle" font-family="sans-serif" font-size="12">12</text>
+<text x="472.5" y="415" text-anchor="middle" font-family="sans-serif" font-size="12">15</text>
+<text x="538.75" y="415" text-anchor="middle" font-family="sans-serif" font-size="12">20</text>
+<text x="605.0" y="415" text-anchor="middle" font-family="sans-serif" font-size="12">50</text>
+<text x="67" y="399.0" text-anchor="end" font-family="sans-serif" font-size="11">0</text>
+<text x="67" y="311.5" text-anchor="end" font-family="sans-serif" font-size="11">305</text>
+<text x="67" y="224.0" text-anchor="end" font-family="sans-serif" font-size="11">610</text>
+<text x="67" y="136.5" text-anchor="end" font-family="sans-serif" font-size="11">915</text>
+<text x="67" y="49.0" text-anchor="end" font-family="sans-serif" font-size="11">1220</text>
+<circle cx="75.00" cy="367.46" r="3" fill="#1f77b4"/>
+<circle cx="141.25" cy="360.57" r="3" fill="#1f77b4"/>
+<circle cx="207.50" cy="353.69" r="3" fill="#1f77b4"/>
+<circle cx="273.75" cy="352.54" r="3" fill="#1f77b4"/>
+<circle cx="340.00" cy="347.95" r="3" fill="#1f77b4"/>
+<circle cx="406.25" cy="344.51" r="3" fill="#1f77b4"/>
+<circle cx="472.50" cy="336.48" r="3" fill="#1f77b4"/>
+<circle cx="538.75" cy="329.59" r="3" fill="#1f77b4"/>
+<circle cx="605.00" cy="318.11" r="3" fill="#1f77b4"/>
+<polyline points="75.00,367.46 141.25,360.57 207.50,353.69 273.75,352.54 340.00,347.95 406.25,344.51 472.50,336.48 538.75,329.59 605.00,318.11" fill="none" stroke="#1f77b4" stroke-width="1.5"/>
+<text x="640" y="65" fill="#1f77b4" font-family="sans-serif" font-size="12">ca-minus</text>
+<circle cx="75.00" cy="367.46" r="3" fill="#d62728"/>
+<circle cx="141.25" cy="360.57" r="3" fill="#d62728"/>
+<circle cx="207.50" cy="354.84" r="3" fill="#d62728"/>
+<circle cx="273.75" cy="353.69" r="3" fill="#d62728"/>
+<circle cx="340.00" cy="349.10" r="3" fill="#d62728"/>
+<circle cx="406.25" cy="345.66" r="3" fill="#d62728"/>
+<circle cx="472.50" cy="338.77" r="3" fill="#d62728"/>
+<circle cx="538.75" cy="333.03" r="3" fill="#d62728"/>
+<circle cx="605.00" cy="320.41" r="3" fill="#d62728"/>
+<polyline points="75.00,367.46 141.25,360.57 207.50,354.84 273.75,353.69 340.00,349.10 406.25,345.66 472.50,338.77 538.75,333.03 605.00,320.41" fill="none" stroke="#d62728" stroke-width="1.5"/>
+<text x="640" y="87" fill="#d62728" font-family="sans-serif" font-size="12">ca-minus+2opt</text>
+<circle cx="75.00" cy="364.02" r="3" fill="#2ca02c"/>
+<circle cx="141.25" cy="354.84" r="3" fill="#2ca02c"/>
+<circle cx="207.50" cy="346.80" r="3" fill="#2ca02c"/>
+<circle cx="273.75" cy="344.51" r="3" fill="#2ca02c"/>
+<circle cx="340.00" cy="341.07" r="3" fill="#2ca02c"/>
+<circle cx="406.25" cy="335.33" r="3" fill="#2ca02c"/>
+<circle cx="472.50" cy="328.44" r="3" fill="#2ca02c"/>
+<circle cx="538.75" cy="319.26" r="3" fill="#2ca02c"/>
+<circle cx="605.00" cy="306.64" r="3" fill="#2ca02c"/>
+<polyline points="75.00,364.02 141.25,354.84 207.50,346.80 273.75,344.51 340.00,341.07 406.25,335.33 472.50,328.44 538.75,319.26 605.00,306.64" fill="none" stroke="#2ca02c" stroke-width="1.5"/>
+<text x="640" y="109" fill="#2ca02c" font-family="sans-serif" font-size="12">ca-plus</text>
+<circle cx="75.00" cy="367.46" r="3" fill="#9467bd"/>
+<circle cx="141.25" cy="360.57" r="3" fill="#9467bd"/>
+<circle cx="207.50" cy="354.84" r="3" fill="#9467bd"/>
+<circle cx="273.75" cy="353.69" r="3" fill="#9467bd"/>
+<circle cx="340.00" cy="349.10" r="3" fill="#9467bd"/>
+<circle cx="406.25" cy="345.66" r="3" fill="#9467bd"/>
+<circle cx="472.50" cy="338.77" r="3" fill="#9467bd"/>
+<circle cx="538.75" cy="333.03" r="3" fill="#9467bd"/>
+<circle cx="605.00" cy="318.11" r="3" fill="#9467bd"/>
+<polyline points="75.00,367.46 141.25,360.57 207.50,354.84 273.75,353.69 340.00,349.10 406.25,345.66 472.50,338.77 538.75,333.03 605.00,318.11" fill="none" stroke="#9467bd" stroke-width="1.5"/>
+<text x="640" y="131" fill="#9467bd" font-family="sans-serif" font-size="12">ca-plus+2opt</text>
+<circle cx="75.00" cy="367.46" r="3" fill="#ff7f0e"/>
+<circle cx="141.25" cy="360.57" r="3" fill="#ff7f0e"/>
+<circle cx="207.50" cy="354.84" r="3" fill="#ff7f0e"/>
+<circle cx="273.75" cy="353.69" r="3" fill="#ff7f0e"/>
+<circle cx="340.00" cy="350.25" r="3" fill="#ff7f0e"/>
+<circle cx="406.25" cy="346.80" r="3" fill="#ff7f0e"/>
+<polyline points="75.00,367.46 141.25,360.57 207.50,354.84 273.75,353.69 340.00,350.25 406.25,346.80" fill="none" stroke="#ff7f0e" stroke-width="1.5"/>
+<text x="640" y="153" fill="#ff7f0e" font-family="sans-serif" font-size="12">dp</text>
+<circle cx="75.00" cy="367.46" r="3" fill="#17becf"/>
+<circle cx="141.25" cy="360.57" r="3" fill="#17becf"/>
+<circle cx="207.50" cy="354.84" r="3" fill="#17becf"/>
+<polyline points="75.00,367.46 141.25,360.57 207.50,354.84" fill="none" stroke="#17becf" stroke-width="1.5"/>
+<text x="640" y="175" fill="#17becf" font-family="sans-serif" font-size="12">exhaustive</text>
+<circle cx="75.00" cy="360.57" r="3" fill="#8c564b"/>
+<circle cx="141.25" cy="346.80" r="3" fill="#8c564b"/>
+<circle cx="207.50" cy="333.03" r="3" fill="#8c564b"/>
+<circle cx="273.75" cy="326.15" r="3" fill="#8c564b"/>
+<circle cx="340.00" cy="315.82" r="3" fill="#8c564b"/>
+<circle cx="406.25" cy="299.75" r="3" fill="#8c564b"/>
+<circle cx="472.50" cy="277.95" r="3" fill="#8c564b"/>
+<circle cx="538.75" cy="246.97" r="3" fill="#8c564b"/>
+<circle cx="605.00" cy="45.00" r="3" fill="#8c564b"/>
+<polyline points="75.00,360.57 141.25,346.80 207.50,333.03 273.75,326.15 340.00,315.82 406.25,299.75 472.50,277.95 538.75,246.97 605.00,45.00" fill="none" stroke="#8c564b" stroke-width="1.5"/>
+<text x="640" y="197" fill="#8c564b" font-family="sans-serif" font-size="12">given</text>
+<circle cx="75.00" cy="366.31" r="3" fill="#e377c2"/>
+<circle cx="141.25" cy="358.28" r="3" fill="#e377c2"/>
+<circle cx="207.50" cy="352.54" r="3" fill="#e377c2"/>
+<circle cx="273.75" cy="350.25" r="3" fill="#e377c2"/>
+<circle cx="340.00" cy="345.66" r="3" fill="#e377c2"/>
+<circle cx="406.25" cy="341.07" r="3" fill="#e377c2"/>
+<circle cx="472.50" cy="334.18" r="3" fill="#e377c2"/>
+<circle cx="538.75" cy="327.30" r="3" fill="#e377c2"/>
+<circle cx="605.00" cy="316.97" r="3" fill="#e377c2"/>
+<polyline points="75.00,366.31 141.25,358.28 207.50,352.54 273.75,350.25 340.00,345.66 406.25,341.07 472.50,334.18 538.75,327.30 605.00,316.97" fill="none" stroke="#e377c2" stroke-width="1.5"/>
+<text x="640" y="219" fill="#e377c2" font-family="sans-serif" font-size="12">nn</text>
+<circle cx="75.00" cy="367.46" r="3" fill="#555555"/>
+<circle cx="141.25" cy="360.57" r="3" fill="#555555"/>
+<circle cx="207.50" cy="354.84" r="3" fill="#555555"/>
+<circle cx="273.75" cy="353.69" r="3" fill="#555555"/>
+<circle cx="340.00" cy="349.10" r="3" fill="#555555"/>
+<circle cx="406.25" cy="345.66" r="3" fill="#555555"/>
+<circle cx="472.50" cy="338.77" r="3" fill="#555555"/>
+<circle cx="538.75" cy="333.03" r="3" fill="#555555"/>
+<circle cx="605.00" cy="320.41" r="3" fill="#555555"/>
+<polyline points="75.00,367.46 141.25,360.57 207.50,354.84 273.75,353.69 340.00,349.10 406.25,345.66 472.50,338.77 538.75,333.03 605.00,320.41" fill="none" stroke="#555555" stroke-width="1.5"/>
+<text x="640" y="241" fill="#555555" font-family="sans-serif" font-size="12">nn+2opt</text>
+<text x="75" y="480" font-family="sans-serif" font-size="10">Failures excluded from distance medians; see summary for attempts and completion counts.</text></svg>

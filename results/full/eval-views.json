@@ -1,0 +1,140 @@
+{
+  "A_exact_agreement": {
+    "paired_tasks": 675,
+    "distance_mismatches": 0
+  },
+  "B_dp_status_by_n": {
+    "3": {
+      "completed": 225
+    },
+    "5": {
+      "completed": 225
+    },
+    "7": {
+      "completed": 225
+    },
+    "8": {
+      "completed": 225
+    },
+    "10": {
+      "completed": 225
+    },
+    "12": {
+      "completed": 225
+    },
+    "15": {
+      "timeout": 225
+    },
+    "20": {
+      "resource_limit": 225
+    },
+    "50": {
+      "resource_limit": 225
+    }
+  },
+  "C_large_nn_vs_2opt": {
+    "pairs": 450,
+    "groups": 15,
+    "mean_difference_m": 21.813333333333333,
+    "ci95_group_bootstrap_m": [
+      19.76,
+      24.07111111111111
+    ]
+  },
+  "D_cluster_nn_vs_2opt": {
+    "pairs": 405,
+    "groups": 15,
+    "mean_difference_m": 12.592592592592593,
+    "ci95_group_bootstrap_m": [
+      11.476543209876544,
+      13.797530864197531
+    ]
+  },
+  "E_dispersion": {
+    "evaluation_median_cutoff_m": 23.53684210526316,
+    "below_or_equal": {
+      "pairs": 1014,
+      "groups": 15,
+      "mean_difference_m": 13.136094674556213,
+      "ci95_group_bootstrap_m": [
+        12.112730806608358,
+        14.113519091847266
+      ]
+    },
+    "above": {
+      "pairs": 1011,
+      "groups": 15,
+      "mean_difference_m": 17.321463897131554,
+      "ci95_group_bootstrap_m": [
+        16.23030303030303,
+        18.4437564499484
+      ]
+    }
+  },
+  "F_nn_far_minus_near": {
+    "pairs": 405,
+    "groups": 15,
+    "mean_difference_m": 4.612345679012345,
+    "ci95_group_bootstrap_m": [
+      2.7950617283950616,
+      6.380246913580247
+    ]
+  },
+  "G_nn_vs_2opt_by_pattern": {
+    "clustered": {
+      "pairs": 405,
+      "groups": 15,
+      "mean_difference_m": 12.592592592592593,
+      "ci95_group_bootstrap_m": [
+        11.476543209876544,
+        13.797530864197531
+      ]
+    },
+    "directional": {
+      "pairs": 405,
+      "groups": 15,
+      "mean_difference_m": 12.217283950617285,
+      "ci95_group_bootstrap_m": [
+        10.97283950617284,
+        13.57037037037037
+      ]
+    },
+    "paired-far": {
+      "pairs": 405,
+      "groups": 15,
+      "mean_difference_m": 13.955555555555556,
+      "ci95_group_bootstrap_m": [
+        12.059259259259258,
+        15.891358024691359
+      ]
+    },
+    "paired-near": {
+      "pairs": 405,
+      "groups": 15,
+      "mean_difference_m": 15.762962962962963,
+      "ci95_group_bootstrap_m": [
+        14.301234567901234,
+        17.362962962962964
+      ]
+    },
+    "random-stow-like": {
+      "pairs": 405,
+      "groups": 15,
+      "mean_difference_m": 21.6,
+      "ci95_group_bootstrap_m": [
+        20.28641975308642,
+        22.755555555555556
+      ]
+    }
+  },
+  "H_nn_front_minus_center": {
+    "pairs": 675,
+    "groups": 15,
+    "mean_difference_m": 5.931851851851852,
+    "ci95_group_bootstrap_m": [
+      4.545185185185185,
+      7.294814814814814
+    ]
+  },
+  "notes": "Descriptive evaluation views, not causal effects. Positive NN-minus-2opt favors 2opt. F also changes start distances. E uses an evaluation median for description only, not selector training."
+}

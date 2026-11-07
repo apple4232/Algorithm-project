@@ -1,0 +1,97 @@
+{
+  "policies": {
+    "count": {
+      "attempts": 2025,
+      "completed_within_budget": 2025,
+      "fixed_minus_policy_m": {
+        "pairs": 2025,
+        "groups": 15,
+        "mean_difference_m": 1.4261728395061728,
+        "ci95_group_bootstrap_m": [
+          1.228641975308642,
+          1.6296296296296295
+        ]
+      },
+      "estimated_offline_regret_m": {
+        "pairs": 2025,
+        "groups": 15,
+        "mean_difference_m": 1.2681481481481482,
+        "ci95_group_bootstrap_m": [
+          1.1180246913580247,
+          1.4162962962962964
+        ]
+      },
+      "tasks_with_estimated_reference": 2025
+    },
+    "fixed": {
+      "attempts": 2025,
+      "completed_within_budget": 2025,
+      "fixed_minus_policy_m": {
+        "pairs": 2025,
+        "groups": 15,
+        "mean_difference_m": 0.0,
+        "ci95_group_bootstrap_m": [
+          0.0,
+          0.0
+        ]
+      },
+      "estimated_offline_regret_m": {
+        "pairs": 2025,
+        "groups": 15,
+        "mean_difference_m": 2.694320987654321,
+        "ci95_group_bootstrap_m": [
+          2.451358024691358,
+          2.94320987654321
+        ]
+      },
+      "tasks_with_estimated_reference": 2025
+    },
+    "numeric": {
+      "attempts": 2025,
+      "completed_within_budget": 2025,
+      "fixed_minus_policy_m": {
+        "pairs": 2025,
+        "groups": 15,
+        "mean_difference_m": 1.4261728395061728,
+        "ci95_group_bootstrap_m": [
+          1.228641975308642,
+          1.6296296296296295
+        ]
+      },
+      "estimated_offline_regret_m": {
+        "pairs": 2025,
+        "groups": 15,
+        "mean_difference_m": 1.2681481481481482,
+        "ci95_group_bootstrap_m": [
+          1.1180246913580247,
+          1.4162962962962964
+        ]
+      },
+      "tasks_with_estimated_reference": 2025
+    },
+    "numeric_pattern": {
+      "attempts": 2025,
+      "completed_within_budget": 2025,
+      "fixed_minus_policy_m": {
+        "pairs": 2025,
+        "groups": 15,
+        "mean_difference_m": 1.4261728395061728,
+        "ci95_group_bootstrap_m": [
+          1.228641975308642,
+          1.6296296296296295
+        ]
+      },
+      "estimated_offline_regret_m": {
+        "pairs": 2025,
+        "groups": 15,
+        "mean_difference_m": 1.2681481481481482,
+        "ci95_group_bootstrap_m": [
+          1.1180246913580247,
+          1.4162962962962964
+        ]
+      },
+      "tasks_with_estimated_reference": 2025
+    }
+  },
+  "note": "Offline reference uses separately timed full requests plus separate feature preparation and policy selection time, and filters candidates exceeding the total budget. Timings vary between runs; this is an estimate, not a deployed selector or proven optimum. Paired differences include only tasks completed within budget by both policies."
+}

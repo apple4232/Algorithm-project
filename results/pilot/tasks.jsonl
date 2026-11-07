@@ -1,0 +1,180 @@
+{"id": "0:3:clustered:0", "group": "0", "seed": 0, "split": "dev", "pattern": "clustered", "start": [0, 0], "required": [[32, 14], [28, 8], [24, 14]]}
+{"id": "0:3:clustered:1", "group": "0", "seed": 0, "split": "dev", "pattern": "clustered", "start": [16, 20], "required": [[32, 14], [28, 8], [24, 14]]}
+{"id": "0:3:clustered:2", "group": "0", "seed": 0, "split": "dev", "pattern": "clustered", "start": [0, 40], "required": [[32, 14], [28, 8], [24, 14]]}
+{"id": "0:3:random-stow-like:0", "group": "0", "seed": 0, "split": "dev", "pattern": "random-stow-like", "start": [0, 0], "required": [[28, 34], [16, 38], [0, 32]]}
+{"id": "0:3:random-stow-like:1", "group": "0", "seed": 0, "split": "dev", "pattern": "random-stow-like", "start": [16, 20], "required": [[28, 34], [16, 38], [0, 32]]}
+{"id": "0:3:random-stow-like:2", "group": "0", "seed": 0, "split": "dev", "pattern": "random-stow-like", "start": [0, 40], "required": [[28, 34], [16, 38], [0, 32]]}
+{"id": "0:3:directional:0", "group": "0", "seed": 0, "split": "dev", "pattern": "directional", "start": [0, 0], "required": [[32, 32], [24, 38], [20, 34]]}
+{"id": "0:3:directional:1", "group": "0", "seed": 0, "split": "dev", "pattern": "directional", "start": [16, 20], "required": [[32, 32], [24, 38], [20, 34]]}
+{"id": "0:3:directional:2", "group": "0", "seed": 0, "split": "dev", "pattern": "directional", "start": [0, 40], "required": [[32, 32], [24, 38], [20, 34]]}
+{"id": "0:3:paired-far:0", "group": "0", "seed": 0, "split": "dev", "pattern": "paired-far", "start": [0, 0], "required": [[4, 32], [12, 4], [8, 14]]}
+{"id": "0:3:paired-far:1", "group": "0", "seed": 0, "split": "dev", "pattern": "paired-far", "start": [16, 20], "required": [[4, 32], [12, 4], [8, 14]]}
+{"id": "0:3:paired-far:2", "group": "0", "seed": 0, "split": "dev", "pattern": "paired-far", "start": [0, 40], "required": [[4, 32], [12, 4], [8, 14]]}
+{"id": "0:3:paired-near:0", "group": "0", "seed": 0, "split": "dev", "pattern": "paired-near", "start": [0, 0], "required": [[32, 32], [24, 4], [28, 14]]}
+{"id": "0:3:paired-near:1", "group": "0", "seed": 0, "split": "dev", "pattern": "paired-near", "start": [16, 20], "required": [[32, 32], [24, 4], [28, 14]]}
+{"id": "0:3:paired-near:2", "group": "0", "seed": 0, "split": "dev", "pattern": "paired-near", "start": [0, 40], "required": [[32, 32], [24, 4], [28, 14]]}
+{"id": "0:5:clustered:0", "group": "0", "seed": 0, "split": "dev", "pattern": "clustered", "start": [0, 0], "required": [[28, 16], [28, 34], [24, 38], [24, 12], [32, 22]]}
+{"id": "0:5:clustered:1", "group": "0", "seed": 0, "split": "dev", "pattern": "clustered", "start": [16, 20], "required": [[28, 16], [28, 34], [24, 38], [24, 12], [32, 22]]}
+{"id": "0:5:clustered:2", "group": "0", "seed": 0, "split": "dev", "pattern": "clustered", "start": [0, 40], "required": [[28, 16], [28, 34], [24, 38], [24, 12], [32, 22]]}
+{"id": "0:5:random-stow-like:0", "group": "0", "seed": 0, "split": "dev", "pattern": "random-stow-like", "start": [0, 0], "required": [[24, 34], [28, 10], [32, 34], [32, 38], [0, 4]]}
+{"id": "0:5:random-stow-like:1", "group": "0", "seed": 0, "split": "dev", "pattern": "random-stow-like", "start": [16, 20], "required": [[24, 34], [28, 10], [32, 34], [32, 38], [0, 4]]}
+{"id": "0:5:random-stow-like:2", "group": "0", "seed": 0, "split": "dev", "pattern": "random-stow-like", "start": [0, 40], "required": [[24, 34], [28, 10], [32, 34], [32, 38], [0, 4]]}
+{"id": "0:5:directional:0", "group": "0", "seed": 0, "split": "dev", "pattern": "directional", "start": [0, 0], "required": [[16, 24], [8, 26], [20, 30], [16, 32], [16, 26]]}
+{"id": "0:5:directional:1", "group": "0", "seed": 0, "split": "dev", "pattern": "directional", "start": [16, 20], "required": [[16, 24], [8, 26], [20, 30], [16, 32], [16, 26]]}
+{"id": "0:5:directional:2", "group": "0", "seed": 0, "split": "dev", "pattern": "directional", "start": [0, 40], "required": [[16, 24], [8, 26], [20, 30], [16, 32], [16, 26]]}
+{"id": "0:5:paired-far:0", "group": "0", "seed": 0, "split": "dev", "pattern": "paired-far", "start": [0, 0], "required": [[0, 12], [8, 8], [0, 24], [12, 16], [12, 38]]}
+{"id": "0:5:paired-far:1", "group": "0", "seed": 0, "split": "dev", "pattern": "paired-far", "start": [16, 20], "required": [[0, 12], [8, 8], [0, 24], [12, 16], [12, 38]]}
+{"id": "0:5:paired-far:2", "group": "0", "seed": 0, "split": "dev", "pattern": "paired-far", "start": [0, 40], "required": [[0, 12], [8, 8], [0, 24], [12, 16], [12, 38]]}
+{"id": "0:5:paired-near:0", "group": "0", "seed": 0, "split": "dev", "pattern": "paired-near", "start": [0, 0], "required": [[36, 12], [28, 8], [36, 24], [24, 16], [24, 38]]}
+{"id": "0:5:paired-near:1", "group": "0", "seed": 0, "split": "dev", "pattern": "paired-near", "start": [16, 20], "required": [[36, 12], [28, 8], [36, 24], [24, 16], [24, 38]]}
+{"id": "0:5:paired-near:2", "group": "0", "seed": 0, "split": "dev", "pattern": "paired-near", "start": [0, 40], "required": [[36, 12], [28, 8], [36, 24], [24, 16], [24, 38]]}
+{"id": "0:10:clustered:0", "group": "0", "seed": 0, "split": "dev", "pattern": "clustered", "start": [0, 0], "required": [[32, 18], [32, 24], [28, 38], [36, 22], [36, 24], [32, 8], [28, 32], [32, 28], [28, 30], [36, 30]]}
+{"id": "0:10:clustered:1", "group": "0", "seed": 0, "split": "dev", "pattern": "clustered", "start": [16, 20], "required": [[32, 18], [32, 24], [28, 38], [36, 22], [36, 24], [32, 8], [28, 32], [32, 28], [28, 30], [36, 30]]}
+{"id": "0:10:clustered:2", "group": "0", "seed": 0, "split": "dev", "pattern": "clustered", "start": [0, 40], "required": [[32, 18], [32, 24], [28, 38], [36, 22], [36, 24], [32, 8], [28, 32], [32, 28], [28, 30], [36, 30]]}
+{"id": "0:10:random-stow-like:0", "group": "0", "seed": 0, "split": "dev", "pattern": "random-stow-like", "start": [0, 0], "required": [[0, 38], [28, 30], [24, 18], [36, 22], [20, 32], [20, 28], [20, 14], [32, 32], [16, 4], [12, 2]]}
+{"id": "0:10:random-stow-like:1", "group": "0", "seed": 0, "split": "dev", "pattern": "random-stow-like", "start": [16, 20], "required": [[0, 38], [28, 30], [24, 18], [36, 22], [20, 32], [20, 28], [20, 14], [32, 32], [16, 4], [12, 2]]}
+{"id": "0:10:random-stow-like:2", "group": "0", "seed": 0, "split": "dev", "pattern": "random-stow-like", "start": [0, 40], "required": [[0, 38], [28, 30], [24, 18], [36, 22], [20, 32], [20, 28], [20, 14], [32, 32], [16, 4], [12, 2]]}
+{"id": "0:10:directional:0", "group": "0", "seed": 0, "split": "dev", "pattern": "directional", "start": [0, 0], "required": [[32, 32], [8, 24], [24, 22], [8, 22], [8, 34], [4, 28], [4, 24], [20, 32], [0, 24], [16, 22]]}
+{"id": "0:10:directional:1", "group": "0", "seed": 0, "split": "dev", "pattern": "directional", "start": [16, 20], "required": [[32, 32], [8, 24], [24, 22], [8, 22], [8, 34], [4, 28], [4, 24], [20, 32], [0, 24], [16, 22]]}
+{"id": "0:10:directional:2", "group": "0", "seed": 0, "split": "dev", "pattern": "directional", "start": [0, 40], "required": [[32, 32], [8, 24], [24, 22], [8, 22], [8, 34], [4, 28], [4, 24], [20, 32], [0, 24], [16, 22]]}
+{"id": "0:10:paired-far:0", "group": "0", "seed": 0, "split": "dev", "pattern": "paired-far", "start": [0, 0], "required": [[16, 22], [12, 16], [12, 30], [0, 22], [8, 16], [12, 8], [16, 2], [8, 34], [8, 4], [4, 8]]}
+{"id": "0:10:paired-far:1", "group": "0", "seed": 0, "split": "dev", "pattern": "paired-far", "start": [16, 20], "required": [[16, 22], [12, 16], [12, 30], [0, 22], [8, 16], [12, 8], [16, 2], [8, 34], [8, 4], [4, 8]]}
+{"id": "0:10:paired-far:2", "group": "0", "seed": 0, "split": "dev", "pattern": "paired-far", "start": [0, 40], "required": [[16, 22], [12, 16], [12, 30], [0, 22], [8, 16], [12, 8], [16, 2], [8, 34], [8, 4], [4, 8]]}
+{"id": "0:10:paired-near:0", "group": "0", "seed": 0, "split": "dev", "pattern": "paired-near", "start": [0, 0], "required": [[20, 22], [24, 16], [24, 30], [36, 22], [28, 16], [24, 8], [20, 2], [28, 34], [28, 4], [32, 8]]}
+{"id": "0:10:paired-near:1", "group": "0", "seed": 0, "split": "dev", "pattern": "paired-near", "start": [16, 20], "required": [[20, 22], [24, 16], [24, 30], [36, 22], [28, 16], [24, 8], [20, 2], [28, 34], [28, 4], [32, 8]]}
+{"id": "0:10:paired-near:2", "group": "0", "seed": 0, "split": "dev", "pattern": "paired-near", "start": [0, 40], "required": [[20, 22], [24, 16], [24, 30], [36, 22], [28, 16], [24, 8], [20, 2], [28, 34], [28, 4], [32, 8]]}
+{"id": "1:3:clustered:0", "group": "1", "seed": 1, "split": "eval", "pattern": "clustered", "start": [0, 0], "required": [[20, 28], [16, 16], [16, 8]]}
+{"id": "1:3:clustered:1", "group": "1", "seed": 1, "split": "eval", "pattern": "clustered", "start": [16, 20], "required": [[20, 28], [16, 16], [16, 8]]}
+{"id": "1:3:clustered:2", "group": "1", "seed": 1, "split": "eval", "pattern": "clustered", "start": [0, 40], "required": [[20, 28], [16, 16], [16, 8]]}
+{"id": "1:3:random-stow-like:0", "group": "1", "seed": 1, "split": "eval", "pattern": "random-stow-like", "start": [0, 0], "required": [[24, 18], [36, 6], [4, 36]]}
+{"id": "1:3:random-stow-like:1", "group": "1", "seed": 1, "split": "eval", "pattern": "random-stow-like", "start": [16, 20], "required": [[24, 18], [36, 6], [4, 36]]}
+{"id": "1:3:random-stow-like:2", "group": "1", "seed": 1, "split": "eval", "pattern": "random-stow-like", "start": [0, 40], "required": [[24, 18], [36, 6], [4, 36]]}
+{"id": "1:3:directional:0", "group": "1", "seed": 1, "split": "eval", "pattern": "directional", "start": [0, 0], "required": [[8, 30], [16, 24], [16, 32]]}
+{"id": "1:3:directional:1", "group": "1", "seed": 1, "split": "eval", "pattern": "directional", "start": [16, 20], "required": [[8, 30], [16, 24], [16, 32]]}
+{"id": "1:3:directional:2", "group": "1", "seed": 1, "split": "eval", "pattern": "directional", "start": [0, 40], "required": [[8, 30], [16, 24], [16, 32]]}
+{"id": "1:3:paired-far:0", "group": "1", "seed": 1, "split": "eval", "pattern": "paired-far", "start": [0, 0], "required": [[8, 18], [16, 36], [8, 38]]}
+{"id": "1:3:paired-far:1", "group": "1", "seed": 1, "split": "eval", "pattern": "paired-far", "start": [16, 20], "required": [[8, 18], [16, 36], [8, 38]]}
+{"id": "1:3:paired-far:2", "group": "1", "seed": 1, "split": "eval", "pattern": "paired-far", "start": [0, 40], "required": [[8, 18], [16, 36], [8, 38]]}
+{"id": "1:3:paired-near:0", "group": "1", "seed": 1, "split": "eval", "pattern": "paired-near", "start": [0, 0], "required": [[28, 18], [20, 36], [28, 38]]}
+{"id": "1:3:paired-near:1", "group": "1", "seed": 1, "split": "eval", "pattern": "paired-near", "start": [16, 20], "required": [[28, 18], [20, 36], [28, 38]]}
+{"id": "1:3:paired-near:2", "group": "1", "seed": 1, "split": "eval", "pattern": "paired-near", "start": [0, 40], "required": [[28, 18], [20, 36], [28, 38]]}
+{"id": "1:5:clustered:0", "group": "1", "seed": 1, "split": "eval", "pattern": "clustered", "start": [0, 0], "required": [[28, 16], [24, 2], [32, 14], [32, 38], [28, 26]]}
+{"id": "1:5:clustered:1", "group": "1", "seed": 1, "split": "eval", "pattern": "clustered", "start": [16, 20], "required": [[28, 16], [24, 2], [32, 14], [32, 38], [28, 26]]}
+{"id": "1:5:clustered:2", "group": "1", "seed": 1, "split": "eval", "pattern": "clustered", "start": [0, 40], "required": [[28, 16], [24, 2], [32, 14], [32, 38], [28, 26]]}
+{"id": "1:5:random-stow-like:0", "group": "1", "seed": 1, "split": "eval", "pattern": "random-stow-like", "start": [0, 0], "required": [[20, 10], [20, 28], [4, 18], [8, 8], [28, 34]]}
+{"id": "1:5:random-stow-like:1", "group": "1", "seed": 1, "split": "eval", "pattern": "random-stow-like", "start": [16, 20], "required": [[20, 10], [20, 28], [4, 18], [8, 8], [28, 34]]}
+{"id": "1:5:random-stow-like:2", "group": "1", "seed": 1, "split": "eval", "pattern": "random-stow-like", "start": [0, 40], "required": [[20, 10], [20, 28], [4, 18], [8, 8], [28, 34]]}
+{"id": "1:5:directional:0", "group": "1", "seed": 1, "split": "eval", "pattern": "directional", "start": [0, 0], "required": [[8, 28], [24, 34], [0, 26], [4, 30], [24, 32]]}
+{"id": "1:5:directional:1", "group": "1", "seed": 1, "split": "eval", "pattern": "directional", "start": [16, 20], "required": [[8, 28], [24, 34], [0, 26], [4, 30], [24, 32]]}
+{"id": "1:5:directional:2", "group": "1", "seed": 1, "split": "eval", "pattern": "directional", "start": [0, 40], "required": [[8, 28], [24, 34], [0, 26], [4, 30], [24, 32]]}
+{"id": "1:5:paired-far:0", "group": "1", "seed": 1, "split": "eval", "pattern": "paired-far", "start": [0, 0], "required": [[16, 26], [8, 12], [12, 38], [12, 16], [0, 2]]}
+{"id": "1:5:paired-far:1", "group": "1", "seed": 1, "split": "eval", "pattern": "paired-far", "start": [16, 20], "required": [[16, 26], [8, 12], [12, 38], [12, 16], [0, 2]]}
+{"id": "1:5:paired-far:2", "group": "1", "seed": 1, "split": "eval", "pattern": "paired-far", "start": [0, 40], "required": [[16, 26], [8, 12], [12, 38], [12, 16], [0, 2]]}
+{"id": "1:5:paired-near:0", "group": "1", "seed": 1, "split": "eval", "pattern": "paired-near", "start": [0, 0], "required": [[20, 26], [28, 12], [24, 38], [24, 16], [36, 2]]}
+{"id": "1:5:paired-near:1", "group": "1", "seed": 1, "split": "eval", "pattern": "paired-near", "start": [16, 20], "required": [[20, 26], [28, 12], [24, 38], [24, 16], [36, 2]]}
+{"id": "1:5:paired-near:2", "group": "1", "seed": 1, "split": "eval", "pattern": "paired-near", "start": [0, 40], "required": [[20, 26], [28, 12], [24, 38], [24, 16], [36, 2]]}
+{"id": "1:10:clustered:0", "group": "1", "seed": 1, "split": "eval", "pattern": "clustered", "start": [0, 0], "required": [[32, 18], [32, 2], [36, 34], [28, 14], [28, 12], [36, 18], [32, 34], [28, 16], [32, 32], [28, 22]]}
+{"id": "1:10:clustered:1", "group": "1", "seed": 1, "split": "eval", "pattern": "clustered", "start": [16, 20], "required": [[32, 18], [32, 2], [36, 34], [28, 14], [28, 12], [36, 18], [32, 34], [28, 16], [32, 32], [28, 22]]}
+{"id": "1:10:clustered:2", "group": "1", "seed": 1, "split": "eval", "pattern": "clustered", "start": [0, 40], "required": [[32, 18], [32, 2], [36, 34], [28, 14], [28, 12], [36, 18], [32, 34], [28, 16], [32, 32], [28, 22]]}
+{"id": "1:10:random-stow-like:0", "group": "1", "seed": 1, "split": "eval", "pattern": "random-stow-like", "start": [0, 0], "required": [[4, 6], [28, 26], [32, 28], [28, 34], [8, 4], [8, 32], [16, 8], [24, 8], [32, 22], [8, 34]]}
+{"id": "1:10:random-stow-like:1", "group": "1", "seed": 1, "split": "eval", "pattern": "random-stow-like", "start": [16, 20], "required": [[4, 6], [28, 26], [32, 28], [28, 34], [8, 4], [8, 32], [16, 8], [24, 8], [32, 22], [8, 34]]}
+{"id": "1:10:random-stow-like:2", "group": "1", "seed": 1, "split": "eval", "pattern": "random-stow-like", "start": [0, 40], "required": [[4, 6], [28, 26], [32, 28], [28, 34], [8, 4], [8, 32], [16, 8], [24, 8], [32, 22], [8, 34]]}
+{"id": "1:10:directional:0", "group": "1", "seed": 1, "split": "eval", "pattern": "directional", "start": [0, 0], "required": [[36, 36], [24, 38], [12, 36], [24, 30], [32, 32], [12, 24], [20, 28], [32, 36], [4, 30], [4, 22]]}
+{"id": "1:10:directional:1", "group": "1", "seed": 1, "split": "eval", "pattern": "directional", "start": [16, 20], "required": [[36, 36], [24, 38], [12, 36], [24, 30], [32, 32], [12, 24], [20, 28], [32, 36], [4, 30], [4, 22]]}
+{"id": "1:10:directional:2", "group": "1", "seed": 1, "split": "eval", "pattern": "directional", "start": [0, 40], "required": [[36, 36], [24, 38], [12, 36], [24, 30], [32, 32], [12, 24], [20, 28], [32, 36], [4, 30], [4, 22]]}
+{"id": "1:10:paired-far:0", "group": "1", "seed": 1, "split": "eval", "pattern": "paired-far", "start": [0, 0], "required": [[0, 14], [12, 12], [12, 30], [16, 10], [8, 22], [12, 32], [12, 10], [12, 14], [16, 26], [12, 18]]}
+{"id": "1:10:paired-far:1", "group": "1", "seed": 1, "split": "eval", "pattern": "paired-far", "start": [16, 20], "required": [[0, 14], [12, 12], [12, 30], [16, 10], [8, 22], [12, 32], [12, 10], [12, 14], [16, 26], [12, 18]]}
+{"id": "1:10:paired-far:2", "group": "1", "seed": 1, "split": "eval", "pattern": "paired-far", "start": [0, 40], "required": [[0, 14], [12, 12], [12, 30], [16, 10], [8, 22], [12, 32], [12, 10], [12, 14], [16, 26], [12, 18]]}
+{"id": "1:10:paired-near:0", "group": "1", "seed": 1, "split": "eval", "pattern": "paired-near", "start": [0, 0], "required": [[36, 14], [24, 12], [24, 30], [20, 10], [28, 22], [24, 32], [24, 10], [24, 14], [20, 26], [24, 18]]}
+{"id": "1:10:paired-near:1", "group": "1", "seed": 1, "split": "eval", "pattern": "paired-near", "start": [16, 20], "required": [[36, 14], [24, 12], [24, 30], [20, 10], [28, 22], [24, 32], [24, 10], [24, 14], [20, 26], [24, 18]]}
+{"id": "1:10:paired-near:2", "group": "1", "seed": 1, "split": "eval", "pattern": "paired-near", "start": [0, 40], "required": [[36, 14], [24, 12], [24, 30], [20, 10], [28, 22], [24, 32], [24, 10], [24, 14], [20, 26], [24, 18]]}
+{"id": "2:3:clustered:0", "group": "2", "seed": 2, "split": "dev", "pattern": "clustered", "start": [0, 0], "required": [[24, 22], [20, 36], [24, 34]]}
+{"id": "2:3:clustered:1", "group": "2", "seed": 2, "split": "dev", "pattern": "clustered", "start": [16, 20], "required": [[24, 22], [20, 36], [24, 34]]}
+{"id": "2:3:clustered:2", "group": "2", "seed": 2, "split": "dev", "pattern": "clustered", "start": [0, 40], "required": [[24, 22], [20, 36], [24, 34]]}
+{"id": "2:3:random-stow-like:0", "group": "2", "seed": 2, "split": "dev", "pattern": "random-stow-like", "start": [0, 0], "required": [[8, 34], [8, 22], [16, 4]]}
+{"id": "2:3:random-stow-like:1", "group": "2", "seed": 2, "split": "dev", "pattern": "random-stow-like", "start": [16, 20], "required": [[8, 34], [8, 22], [16, 4]]}
+{"id": "2:3:random-stow-like:2", "group": "2", "seed": 2, "split": "dev", "pattern": "random-stow-like", "start": [0, 40], "required": [[8, 34], [8, 22], [16, 4]]}
+{"id": "2:3:directional:0", "group": "2", "seed": 2, "split": "dev", "pattern": "directional", "start": [0, 0], "required": [[24, 26], [20, 38], [24, 32]]}
+{"id": "2:3:directional:1", "group": "2", "seed": 2, "split": "dev", "pattern": "directional", "start": [16, 20], "required": [[24, 26], [20, 38], [24, 32]]}
+{"id": "2:3:directional:2", "group": "2", "seed": 2, "split": "dev", "pattern": "directional", "start": [0, 40], "required": [[24, 26], [20, 38], [24, 32]]}
+{"id": "2:3:paired-far:0", "group": "2", "seed": 2, "split": "dev", "pattern": "paired-far", "start": [0, 0], "required": [[8, 14], [0, 36], [12, 8]]}
+{"id": "2:3:paired-far:1", "group": "2", "seed": 2, "split": "dev", "pattern": "paired-far", "start": [16, 20], "required": [[8, 14], [0, 36], [12, 8]]}
+{"id": "2:3:paired-far:2", "group": "2", "seed": 2, "split": "dev", "pattern": "paired-far", "start": [0, 40], "required": [[8, 14], [0, 36], [12, 8]]}
+{"id": "2:3:paired-near:0", "group": "2", "seed": 2, "split": "dev", "pattern": "paired-near", "start": [0, 0], "required": [[28, 14], [36, 36], [24, 8]]}
+{"id": "2:3:paired-near:1", "group": "2", "seed": 2, "split": "dev", "pattern": "paired-near", "start": [16, 20], "required": [[28, 14], [36, 36], [24, 8]]}
+{"id": "2:3:paired-near:2", "group": "2", "seed": 2, "split": "dev", "pattern": "paired-near", "start": [0, 40], "required": [[28, 14], [36, 36], [24, 8]]}
+{"id": "2:5:clustered:0", "group": "2", "seed": 2, "split": "dev", "pattern": "clustered", "start": [0, 0], "required": [[8, 8], [4, 26], [8, 24], [4, 30], [12, 4]]}
+{"id": "2:5:clustered:1", "group": "2", "seed": 2, "split": "dev", "pattern": "clustered", "start": [16, 20], "required": [[8, 8], [4, 26], [8, 24], [4, 30], [12, 4]]}
+{"id": "2:5:clustered:2", "group": "2", "seed": 2, "split": "dev", "pattern": "clustered", "start": [0, 40], "required": [[8, 8], [4, 26], [8, 24], [4, 30], [12, 4]]}
+{"id": "2:5:random-stow-like:0", "group": "2", "seed": 2, "split": "dev", "pattern": "random-stow-like", "start": [0, 0], "required": [[20, 32], [32, 28], [36, 24], [8, 24], [36, 8]]}
+{"id": "2:5:random-stow-like:1", "group": "2", "seed": 2, "split": "dev", "pattern": "random-stow-like", "start": [16, 20], "required": [[20, 32], [32, 28], [36, 24], [8, 24], [36, 8]]}
+{"id": "2:5:random-stow-like:2", "group": "2", "seed": 2, "split": "dev", "pattern": "random-stow-like", "start": [0, 40], "required": [[20, 32], [32, 28], [36, 24], [8, 24], [36, 8]]}
+{"id": "2:5:directional:0", "group": "2", "seed": 2, "split": "dev", "pattern": "directional", "start": [0, 0], "required": [[4, 38], [24, 28], [16, 24], [32, 22], [32, 34]]}
+{"id": "2:5:directional:1", "group": "2", "seed": 2, "split": "dev", "pattern": "directional", "start": [16, 20], "required": [[4, 38], [24, 28], [16, 24], [32, 22], [32, 34]]}
+{"id": "2:5:directional:2", "group": "2", "seed": 2, "split": "dev", "pattern": "directional", "start": [0, 40], "required": [[4, 38], [24, 28], [16, 24], [32, 22], [32, 34]]}
+{"id": "2:5:paired-far:0", "group": "2", "seed": 2, "split": "dev", "pattern": "paired-far", "start": [0, 0], "required": [[12, 26], [16, 38], [4, 14], [12, 32], [0, 12]]}
+{"id": "2:5:paired-far:1", "group": "2", "seed": 2, "split": "dev", "pattern": "paired-far", "start": [16, 20], "required": [[12, 26], [16, 38], [4, 14], [12, 32], [0, 12]]}
+{"id": "2:5:paired-far:2", "group": "2", "seed": 2, "split": "dev", "pattern": "paired-far", "start": [0, 40], "required": [[12, 26], [16, 38], [4, 14], [12, 32], [0, 12]]}
+{"id": "2:5:paired-near:0", "group": "2", "seed": 2, "split": "dev", "pattern": "paired-near", "start": [0, 0], "required": [[24, 26], [20, 38], [32, 14], [24, 32], [36, 12]]}
+{"id": "2:5:paired-near:1", "group": "2", "seed": 2, "split": "dev", "pattern": "paired-near", "start": [16, 20], "required": [[24, 26], [20, 38], [32, 14], [24, 32], [36, 12]]}
+{"id": "2:5:paired-near:2", "group": "2", "seed": 2, "split": "dev", "pattern": "paired-near", "start": [0, 40], "required": [[24, 26], [20, 38], [32, 14], [24, 32], [36, 12]]}
+{"id": "2:10:clustered:0", "group": "2", "seed": 2, "split": "dev", "pattern": "clustered", "start": [0, 0], "required": [[16, 24], [12, 8], [16, 30], [12, 4], [8, 26], [16, 4], [16, 22], [16, 26], [8, 10], [16, 8]]}
+{"id": "2:10:clustered:1", "group": "2", "seed": 2, "split": "dev", "pattern": "clustered", "start": [16, 20], "required": [[16, 24], [12, 8], [16, 30], [12, 4], [8, 26], [16, 4], [16, 22], [16, 26], [8, 10], [16, 8]]}
+{"id": "2:10:clustered:2", "group": "2", "seed": 2, "split": "dev", "pattern": "clustered", "start": [0, 40], "required": [[16, 24], [12, 8], [16, 30], [12, 4], [8, 26], [16, 4], [16, 22], [16, 26], [8, 10], [16, 8]]}
+{"id": "2:10:random-stow-like:0", "group": "2", "seed": 2, "split": "dev", "pattern": "random-stow-like", "start": [0, 0], "required": [[36, 8], [0, 6], [12, 16], [32, 4], [12, 18], [20, 34], [12, 30], [12, 34], [28, 28], [24, 28]]}
+{"id": "2:10:random-stow-like:1", "group": "2", "seed": 2, "split": "dev", "pattern": "random-stow-like", "start": [16, 20], "required": [[36, 8], [0, 6], [12, 16], [32, 4], [12, 18], [20, 34], [12, 30], [12, 34], [28, 28], [24, 28]]}
+{"id": "2:10:random-stow-like:2", "group": "2", "seed": 2, "split": "dev", "pattern": "random-stow-like", "start": [0, 40], "required": [[36, 8], [0, 6], [12, 16], [32, 4], [12, 18], [20, 34], [12, 30], [12, 34], [28, 28], [24, 28]]}
+{"id": "2:10:directional:0", "group": "2", "seed": 2, "split": "dev", "pattern": "directional", "start": [0, 0], "required": [[36, 32], [32, 26], [28, 24], [8, 30], [28, 30], [12, 22], [20, 26], [12, 28], [4, 34], [36, 26]]}
+{"id": "2:10:directional:1", "group": "2", "seed": 2, "split": "dev", "pattern": "directional", "start": [16, 20], "required": [[36, 32], [32, 26], [28, 24], [8, 30], [28, 30], [12, 22], [20, 26], [12, 28], [4, 34], [36, 26]]}
+{"id": "2:10:directional:2", "group": "2", "seed": 2, "split": "dev", "pattern": "directional", "start": [0, 40], "required": [[36, 32], [32, 26], [28, 24], [8, 30], [28, 30], [12, 22], [20, 26], [12, 28], [4, 34], [36, 26]]}
+{"id": "2:10:paired-far:0", "group": "2", "seed": 2, "split": "dev", "pattern": "paired-far", "start": [0, 0], "required": [[0, 16], [0, 22], [4, 30], [8, 16], [4, 28], [16, 24], [16, 16], [16, 26], [0, 38], [12, 10]]}
+{"id": "2:10:paired-far:1", "group": "2", "seed": 2, "split": "dev", "pattern": "paired-far", "start": [16, 20], "required": [[0, 16], [0, 22], [4, 30], [8, 16], [4, 28], [16, 24], [16, 16], [16, 26], [0, 38], [12, 10]]}
+{"id": "2:10:paired-far:2", "group": "2", "seed": 2, "split": "dev", "pattern": "paired-far", "start": [0, 40], "required": [[0, 16], [0, 22], [4, 30], [8, 16], [4, 28], [16, 24], [16, 16], [16, 26], [0, 38], [12, 10]]}
+{"id": "2:10:paired-near:0", "group": "2", "seed": 2, "split": "dev", "pattern": "paired-near", "start": [0, 0], "required": [[36, 16], [36, 22], [32, 30], [28, 16], [32, 28], [20, 24], [20, 16], [20, 26], [36, 38], [24, 10]]}
+{"id": "2:10:paired-near:1", "group": "2", "seed": 2, "split": "dev", "pattern": "paired-near", "start": [16, 20], "required": [[36, 16], [36, 22], [32, 30], [28, 16], [32, 28], [20, 24], [20, 16], [20, 26], [36, 38], [24, 10]]}
+{"id": "2:10:paired-near:2", "group": "2", "seed": 2, "split": "dev", "pattern": "paired-near", "start": [0, 40], "required": [[36, 16], [36, 22], [32, 30], [28, 16], [32, 28], [20, 24], [20, 16], [20, 26], [36, 38], [24, 10]]}
+{"id": "3:3:clustered:0", "group": "3", "seed": 3, "split": "eval", "pattern": "clustered", "start": [0, 0], "required": [[8, 30], [8, 14], [0, 28]]}
+{"id": "3:3:clustered:1", "group": "3", "seed": 3, "split": "eval", "pattern": "clustered", "start": [16, 20], "required": [[8, 30], [8, 14], [0, 28]]}
+{"id": "3:3:clustered:2", "group": "3", "seed": 3, "split": "eval", "pattern": "clustered", "start": [0, 40], "required": [[8, 30], [8, 14], [0, 28]]}
+{"id": "3:3:random-stow-like:0", "group": "3", "seed": 3, "split": "eval", "pattern": "random-stow-like", "start": [0, 0], "required": [[12, 16], [28, 34], [20, 26]]}
+{"id": "3:3:random-stow-like:1", "group": "3", "seed": 3, "split": "eval", "pattern": "random-stow-like", "start": [16, 20], "required": [[12, 16], [28, 34], [20, 26]]}
+{"id": "3:3:random-stow-like:2", "group": "3", "seed": 3, "split": "eval", "pattern": "random-stow-like", "start": [0, 40], "required": [[12, 16], [28, 34], [20, 26]]}
+{"id": "3:3:directional:0", "group": "3", "seed": 3, "split": "eval", "pattern": "directional", "start": [0, 0], "required": [[12, 36], [32, 26], [28, 22]]}
+{"id": "3:3:directional:1", "group": "3", "seed": 3, "split": "eval", "pattern": "directional", "start": [16, 20], "required": [[12, 36], [32, 26], [28, 22]]}
+{"id": "3:3:directional:2", "group": "3", "seed": 3, "split": "eval", "pattern": "directional", "start": [0, 40], "required": [[12, 36], [32, 26], [28, 22]]}
+{"id": "3:3:paired-far:0", "group": "3", "seed": 3, "split": "eval", "pattern": "paired-far", "start": [0, 0], "required": [[12, 6], [16, 28], [0, 24]]}
+{"id": "3:3:paired-far:1", "group": "3", "seed": 3, "split": "eval", "pattern": "paired-far", "start": [16, 20], "required": [[12, 6], [16, 28], [0, 24]]}
+{"id": "3:3:paired-far:2", "group": "3", "seed": 3, "split": "eval", "pattern": "paired-far", "start": [0, 40], "required": [[12, 6], [16, 28], [0, 24]]}
+{"id": "3:3:paired-near:0", "group": "3", "seed": 3, "split": "eval", "pattern": "paired-near", "start": [0, 0], "required": [[24, 6], [20, 28], [36, 24]]}
+{"id": "3:3:paired-near:1", "group": "3", "seed": 3, "split": "eval", "pattern": "paired-near", "start": [16, 20], "required": [[24, 6], [20, 28], [36, 24]]}
+{"id": "3:3:paired-near:2", "group": "3", "seed": 3, "split": "eval", "pattern": "paired-near", "start": [0, 40], "required": [[24, 6], [20, 28], [36, 24]]}
+{"id": "3:5:clustered:0", "group": "3", "seed": 3, "split": "eval", "pattern": "clustered", "start": [0, 0], "required": [[24, 26], [24, 18], [28, 32], [20, 6], [24, 14]]}
+{"id": "3:5:clustered:1", "group": "3", "seed": 3, "split": "eval", "pattern": "clustered", "start": [16, 20], "required": [[24, 26], [24, 18], [28, 32], [20, 6], [24, 14]]}
+{"id": "3:5:clustered:2", "group": "3", "seed": 3, "split": "eval", "pattern": "clustered", "start": [0, 40], "required": [[24, 26], [24, 18], [28, 32], [20, 6], [24, 14]]}
+{"id": "3:5:random-stow-like:0", "group": "3", "seed": 3, "split": "eval", "pattern": "random-stow-like", "start": [0, 0], "required": [[4, 32], [12, 12], [28, 12], [24, 6], [32, 34]]}
+{"id": "3:5:random-stow-like:1", "group": "3", "seed": 3, "split": "eval", "pattern": "random-stow-like", "start": [16, 20], "required": [[4, 32], [12, 12], [28, 12], [24, 6], [32, 34]]}
+{"id": "3:5:random-stow-like:2", "group": "3", "seed": 3, "split": "eval", "pattern": "random-stow-like", "start": [0, 40], "required": [[4, 32], [12, 12], [28, 12], [24, 6], [32, 34]]}
+{"id": "3:5:directional:0", "group": "3", "seed": 3, "split": "eval", "pattern": "directional", "start": [0, 0], "required": [[36, 30], [4, 30], [0, 26], [8, 38], [32, 24]]}
+{"id": "3:5:directional:1", "group": "3", "seed": 3, "split": "eval", "pattern": "directional", "start": [16, 20], "required": [[36, 30], [4, 30], [0, 26], [8, 38], [32, 24]]}
+{"id": "3:5:directional:2", "group": "3", "seed": 3, "split": "eval", "pattern": "directional", "start": [0, 40], "required": [[36, 30], [4, 30], [0, 26], [8, 38], [32, 24]]}
+{"id": "3:5:paired-far:0", "group": "3", "seed": 3, "split": "eval", "pattern": "paired-far", "start": [0, 0], "required": [[12, 12], [8, 28], [16, 26], [16, 16], [16, 12]]}
+{"id": "3:5:paired-far:1", "group": "3", "seed": 3, "split": "eval", "pattern": "paired-far", "start": [16, 20], "required": [[12, 12], [8, 28], [16, 26], [16, 16], [16, 12]]}
+{"id": "3:5:paired-far:2", "group": "3", "seed": 3, "split": "eval", "pattern": "paired-far", "start": [0, 40], "required": [[12, 12], [8, 28], [16, 26], [16, 16], [16, 12]]}
+{"id": "3:5:paired-near:0", "group": "3", "seed": 3, "split": "eval", "pattern": "paired-near", "start": [0, 0], "required": [[24, 12], [28, 28], [20, 26], [20, 16], [20, 12]]}
+{"id": "3:5:paired-near:1", "group": "3", "seed": 3, "split": "eval", "pattern": "paired-near", "start": [16, 20], "required": [[24, 12], [28, 28], [20, 26], [20, 16], [20, 12]]}
+{"id": "3:5:paired-near:2", "group": "3", "seed": 3, "split": "eval", "pattern": "paired-near", "start": [0, 40], "required": [[24, 12], [28, 28], [20, 26], [20, 16], [20, 12]]}
+{"id": "3:10:clustered:0", "group": "3", "seed": 3, "split": "eval", "pattern": "clustered", "start": [0, 0], "required": [[0, 12], [0, 32], [0, 8], [4, 26], [4, 30], [0, 14], [4, 28], [4, 14], [0, 26], [4, 4]]}
+{"id": "3:10:clustered:1", "group": "3", "seed": 3, "split": "eval", "pattern": "clustered", "start": [16, 20], "required": [[0, 12], [0, 32], [0, 8], [4, 26], [4, 30], [0, 14], [4, 28], [4, 14], [0, 26], [4, 4]]}
+{"id": "3:10:clustered:2", "group": "3", "seed": 3, "split": "eval", "pattern": "clustered", "start": [0, 40], "required": [[0, 12], [0, 32], [0, 8], [4, 26], [4, 30], [0, 14], [4, 28], [4, 14], [0, 26], [4, 4]]}
+{"id": "3:10:random-stow-like:0", "group": "3", "seed": 3, "split": "eval", "pattern": "random-stow-like", "start": [0, 0], "required": [[8, 4], [16, 36], [8, 36], [20, 12], [36, 2], [12, 16], [32, 12], [24, 12], [28, 16], [20, 4]]}
+{"id": "3:10:random-stow-like:1", "group": "3", "seed": 3, "split": "eval", "pattern": "random-stow-like", "start": [16, 20], "required": [[8, 4], [16, 36], [8, 36], [20, 12], [36, 2], [12, 16], [32, 12], [24, 12], [28, 16], [20, 4]]}
+{"id": "3:10:random-stow-like:2", "group": "3", "seed": 3, "split": "eval", "pattern": "random-stow-like", "start": [0, 40], "required": [[8, 4], [16, 36], [8, 36], [20, 12], [36, 2], [12, 16], [32, 12], [24, 12], [28, 16], [20, 4]]}
+{"id": "3:10:directional:0", "group": "3", "seed": 3, "split": "eval", "pattern": "directional", "start": [0, 0], "required": [[12, 26], [0, 36], [4, 22], [16, 22], [8, 26], [20, 36], [8, 22], [24, 36], [16, 28], [36, 26]]}
+{"id": "3:10:directional:1", "group": "3", "seed": 3, "split": "eval", "pattern": "directional", "start": [16, 20], "required": [[12, 26], [0, 36], [4, 22], [16, 22], [8, 26], [20, 36], [8, 22], [24, 36], [16, 28], [36, 26]]}
+{"id": "3:10:directional:2", "group": "3", "seed": 3, "split": "eval", "pattern": "directional", "start": [0, 40], "required": [[12, 26], [0, 36], [4, 22], [16, 22], [8, 26], [20, 36], [8, 22], [24, 36], [16, 28], [36, 26]]}
+{"id": "3:10:paired-far:0", "group": "3", "seed": 3, "split": "eval", "pattern": "paired-far", "start": [0, 0], "required": [[8, 30], [4, 18], [0, 2], [8, 24], [0, 14], [8, 16], [16, 26], [8, 28], [4, 4], [8, 22]]}
+{"id": "3:10:paired-far:1", "group": "3", "seed": 3, "split": "eval", "pattern": "paired-far", "start": [16, 20], "required": [[8, 30], [4, 18], [0, 2], [8, 24], [0, 14], [8, 16], [16, 26], [8, 28], [4, 4], [8, 22]]}
+{"id": "3:10:paired-far:2", "group": "3", "seed": 3, "split": "eval", "pattern": "paired-far", "start": [0, 40], "required": [[8, 30], [4, 18], [0, 2], [8, 24], [0, 14], [8, 16], [16, 26], [8, 28], [4, 4], [8, 22]]}
+{"id": "3:10:paired-near:0", "group": "3", "seed": 3, "split": "eval", "pattern": "paired-near", "start": [0, 0], "required": [[28, 30], [32, 18], [36, 2], [28, 24], [36, 14], [28, 16], [20, 26], [28, 28], [32, 4], [28, 22]]}
+{"id": "3:10:paired-near:1", "group": "3", "seed": 3, "split": "eval", "pattern": "paired-near", "start": [16, 20], "required": [[28, 30], [32, 18], [36, 2], [28, 24], [36, 14], [28, 16], [20, 26], [28, 28], [32, 4], [28, 22]]}
+{"id": "3:10:paired-near:2", "group": "3", "seed": 3, "split": "eval", "pattern": "paired-near", "start": [0, 40], "required": [[28, 30], [32, 18], [36, 2], [28, 24], [36, 14], [28, 16], [20, 26], [28, 28], [32, 4], [28, 22]]}

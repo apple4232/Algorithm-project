@@ -1,0 +1,75 @@
+{
+  "rules": {
+    "fixed": {
+      "algorithm": "nn+2opt"
+    },
+    "count": {
+      "feature": "n",
+      "threshold": 13.5,
+      "left": "dp",
+      "right": "nn+2opt"
+    },
+    "numeric": {
+      "feature": "n",
+      "threshold": 13.5,
+      "left": "dp",
+      "right": "nn+2opt"
+    },
+    "numeric_pattern": {
+      "feature": "n",
+      "threshold": 13.5,
+      "left": "dp",
+      "right": "nn+2opt"
+    }
+  },
+  "training_task_count": 2025,
+  "training_groups": [
+    "100",
+    "102",
+    "104",
+    "106",
+    "108",
+    "110",
+    "112",
+    "114",
+    "116",
+    "118",
+    "120",
+    "122",
+    "124",
+    "126",
+    "128"
+  ],
+  "budget_seconds": 0.2,
+  "coefficient": 0.5,
+  "limits": {
+    "dp_memory_bytes": 268435456,
+    "dp_n": 15,
+    "exhaustive_n": 7,
+    "two_opt_evaluations": 10000
+  },
+  "source_sha256": "941915446a53912002d7e69be37e340b0c909853ed0b1d8ceb491246f73730e2",
+  "group_cross_validation": {
+    "fixed": {
+      "completed": 2025,
+      "failures": 0,
+      "mean_distance_m": 169.8488888888889
+    },
+    "count": {
+      "completed": 2025,
+      "failures": 0,
+      "mean_distance_m": 168.399012345679
+    },
+    "numeric": {
+      "completed": 2025,
+      "failures": 0,
+      "mean_distance_m": 168.399012345679
+    },
+    "numeric_pattern": {
+      "completed": 2025,
+      "failures": 0,
+      "mean_distance_m": 168.399012345679
+    }
+  },
+  "note": "Rules fitted on all development data after grouped CV; pattern is synthetic metadata."
+}
